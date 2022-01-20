@@ -155,9 +155,18 @@ class Admin_model extends CI_Model
         $this->db->delete('tb_kendaraan', ['id' => $id]);
     }
 
+    function count_giat()
+    {
+        $this->db->select('waktu, COUNT(waktu) as tanggal');
+        $this->db->group_by('LEFT(waktu, 10)', 'DESC');
+        $hasil = $this->db->get('tb_giat');
+        return $hasil;
+    }
+
     function get_data_giat()
     {
-        $query = $this->db->query("SELECT *,COUNT(waktu) AS tanggal FROM tb_giat GROUP BY LEFT(waktu, 10) DESC");
+        $this->db->query("SET sql_mode=(SELECT REPLACE(@@sql_mode, 'ONLY_FULL_GROUP_BY', ''));");
+        $query = $this->count_giat();
             if($query->num_rows() > 0){
                 foreach($query->result() as $data){
                     $hasil[] = $data;
