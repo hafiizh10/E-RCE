@@ -82,8 +82,10 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-featured animate-box">
                         <a href="<?= base_url('post/') . $lp['slug'] ?>">
-                        <img class="img-responsive img-rounded" src="<?= tampil_foto($lp['image']); ?>"></a>
-                        <h2><a href="<?= base_url('post/') . $lp['slug'] ?>"><div style="font-weight: 500;"><?= $lp['judul'] ?></div></a></h2>
+                            <img class="img-responsive img-rounded" src="<?= tampil_foto($lp['image']); ?>"></a>
+                        <h2><a href="<?= base_url('post/') . $lp['slug'] ?>">
+                                <div style="font-weight: 500;"><?= $lp['judul'] ?></div>
+                            </a></h2>
                         <p class="meta"><span><?= $lp['created_at'] ?></span> | <span><?= $lp['kategori'] ?></span></p>
                         <p><?= filter(word_limiter($lp['isi'], 10)); ?> <a href="<?= base_url('post/') . $lp['slug'] ?>">Baca Selengkapnya...</a></p>
                     </div>

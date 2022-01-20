@@ -40,86 +40,71 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="<?= base_url('assets/lawmaker/') ?>css/style.css">
 
+	<link rel="stylesheet" href="<?= base_url('assets/lawmaker/') ?>wa/floating-wpp.min.css">
+
 	<!-- Modernizr JS -->
 	<script src="<?= base_url('assets/lawmaker/') ?>js/modernizr-2.6.2.min.js"></script>
 	<style>
-    .content {
-		width: 450px;
-		overflow: hidden;
-		margin: auto;
-		margin-bottom: 10px;
-    }
-
-    .content img {
-		margin-right: 5px;
-		float: left;
-		height: 80px; 
-		width: 80px;
-    }
-
-    .content p{
-		-webkit-text-stroke: 1px white;
-		font-family: 'Work Sans', sans-serif;
-		font-size: 18px;
-		margin: auto;
-		padding: 15px;
-		text-align: left;
-		display: block;
-		margin: 5px 0 0 0;
-		line-height: 1.2;
-		color: #ffffff;
-    }
-
-	.float{
-		position:fixed;
-		width:60px;
-		height:60px;
-		bottom:18px;
-		right:40px;
-		background-color:#25d366;
-		color:#FFF;
-		border-radius:50px;
-		text-align:center;
-		font-size:30px;
-		box-shadow: 2px 2px 3px #999;
-		z-index:100;
-		margin-right:50px;
-	}
-
-	.my-float{
-		margin-top:16px;
-	}
-
-    @media only screen and (max-width: 600px) {
 		.content {
-			width: 350px;
+			width: 450px;
 			overflow: hidden;
-			margin: auto 10px;
+			margin: auto;
 			margin-bottom: 10px;
 		}
 
 		.content img {
 			margin-right: 5px;
 			float: left;
-			height: 80px; 
+			height: 80px;
 			width: 80px;
 		}
 
-		.content p{
-			-webkit-text-stroke: 1.5px white;
+		.content p {
+			-webkit-text-stroke: 1px white;
 			font-family: 'Work Sans', sans-serif;
+			font-size: 18px;
 			margin: auto;
-			padding: 10px;
+			padding: 15px;
 			text-align: left;
 			display: block;
+			margin: 5px 0 0 0;
+			line-height: 1.2;
 			color: #ffffff;
 		}
-    }
-    </style>
+
+		.tombol_wa {
+			z-index: 10;
+		}
+
+		@media only screen and (max-width: 600px) {
+			.content {
+				width: 350px;
+				overflow: hidden;
+				margin: auto 10px;
+				margin-bottom: 10px;
+			}
+
+			.content img {
+				margin-right: 5px;
+				float: left;
+				height: 80px;
+				width: 80px;
+			}
+
+			.content p {
+				-webkit-text-stroke: 1.5px white;
+				font-family: 'Work Sans', sans-serif;
+				margin: auto;
+				padding: 10px;
+				text-align: left;
+				display: block;
+				color: #ffffff;
+			}
+		}
+	</style>
 </head>
 
 <body>
-<a href="https://wa.me/<?= $media['text_1'] ?>" class="float" target="_blank"><i class="fab fa-whatsapp my-float"></i></a>
 	<div id="page">
 		<nav class="ftco-nav" role="navigation">
 			<div class="top-menu">
