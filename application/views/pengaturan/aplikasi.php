@@ -33,7 +33,7 @@
                                             <?= form_open_multipart() ?>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                     <div class="devit-card-custom">
-                                                            <div class="form-group">
+                                                        <div class="form-group">
                                                             <input type="hidden" name="id" value="<?= $aplikasi['id'] ?>">
                                                             <label style="font-size: 17px;">Nama Aplikasi</label>
                                                             <input type="text" class="form-control" id="nama_aplikasi" name="nama_aplikasi" value="<?= $aplikasi['nama_aplikasi']; ?>" autocomplete="off" placeholder="Isi sesuai dengan nama lembaga/organisasi/komunitas" required>
@@ -49,6 +49,10 @@
                                                             <input type="text" class="form-control" id="logo_menu" name="logo_menu" autocomplete="off" value="<?= $aplikasi['logo_menu']; ?>" placeholder="Isi singkatan dari nama lembaga/organisasi/komunitas maksimal 8 karakter" required>
                                                             <?= form_error('logo_menu', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="devit-card-custom">
                                                         <div class="form-group">
                                                             <label style="font-size: 17px;">Footer Aplikasi</label>
                                                             <input type="text" class="form-control" id="footer_aplikasi" name="footer_aplikasi" autocomplete="off" value="<?= $aplikasi['footer_aplikasi']; ?>" placeholder="Copyright &copy; 2021 TIM IT IEA Banjarbaru" required>
@@ -69,6 +73,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="form-group">
                                                         <button type="submit" class="btn btn-custon-four btn-primary">Submit</button>
                                                     </div>
                                                 </div>

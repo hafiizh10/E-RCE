@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-            <?= form_open_multipart('user/edit_profil'); ?>
+            <?= form_open_multipart('user/edit_profil', 'autocomplete="off"'); ?>
                 <div class="product-payment-inner-st res-mg-t-30 analysis-progrebar-ctn">
                     <ul id="myTabedu1" class="tab-review-design">
                         <li class="active"><a href="#data">Update Profil</a></li>

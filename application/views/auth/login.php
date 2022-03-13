@@ -126,7 +126,7 @@
 				<div class="hpanel">
         <?= $this->session->flashdata('message'); ?>
           <div class="panel-body">
-              <?= form_open('auth', 'id="loginForm"'); ?>
+              <?= form_open('auth', 'id="loginForm" autocomplete="off"'); ?>
                   <div class="form-group">
                       <label class="control-label" for="username">Username</label>
                       <input type="text" placeholder="Username" name="username" id="username" class="form-control" autofocus>

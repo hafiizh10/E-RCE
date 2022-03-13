@@ -29,12 +29,12 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="review-content-section">
                             <div class="row">
-                                <?= form_open() ?>
+                                <?= form_open('', 'autocomplete="off"') ?>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="devit-card-custom">
                                         <div class="form-group">
                                         <label>Nama Kegiatan</label>
-                                            <input type="text" class="form-control" id="kegiatan" name="kegiatan" list="giat" required/>
+                                            <input type="text" class="form-control" id="kegiatan" name="kegiatan" list="giat" placeholder="Isi nama kegiatan" required/>
                                             <datalist id="giat">
                                                 <option>Laka Tunggal</option>
                                                 <option>Lakalantas</option>
@@ -51,12 +51,12 @@
                                         </div>
                                         <div class="form-group">
                                         <label>Lokasi Kejadian</label>
-                                            <input type="text" class="form-control" id="lokasi" name="lokasi" required>
+                                            <input type="text" class="form-control" id="lokasi" name="lokasi" placeholder="Isi nama tempat" required>
                                             <?= form_error('lokasi', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
                                         </div>
                                         <div class="form-group">
                                         <label>Penanganan</label>
-                                            <textarea type="text" class="form-control" name="penanganan" required></textarea>
+                                            <textarea type="text" class="form-control" name="penanganan" placeholder="Deskripsi penanganan / kejadian" required></textarea>
                                             <?= form_error('penanganan', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
                                         </div>
                                         <div class="form-group">
@@ -86,7 +86,7 @@
                                                 <div class="panel panel-default">
                                                     <div class="panel-heading accordion-head">
                                                         <h4 class="panel-title">
-                                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse4">Dirujuk Ke Rumah Sakit?</a>
+                                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse4">Dirujuk Ke Rumah Sakit? (Klik disini)</a>
                                                         </h4>
                                                     </div>
                                                     <div id="collapse4" class="panel-collapse panel-ic collapse">

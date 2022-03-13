@@ -34,7 +34,7 @@
                                             <?= form_open_multipart() ?>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                     <div class="devit-card-custom">
-                                                            <div class="form-group">
+                                                        <div class="form-group">
                                                             <input type="hidden" name="id" value="<?= $surat['id'] ?>">
                                                             <label style="font-size: 17px;">Nama lembaga/organisasi/komunitas</label>
                                                             <input type="text" class="form-control" id="title_1" name="title_1" value="<?= $surat['title_1']; ?>" autocomplete="off" placeholder="Isi dengan nama lembaga/organisasi/komunitas" required>
@@ -45,6 +45,10 @@
                                                             <textarea type="text" class="form-control" id="informasi_1" name="informasi_1" autocomplete="off" placeholder="Isi dengan alamat lembaga/organisasi/komunitas" required><?= $surat['informasi_1']; ?></textarea>
                                                             <?= form_error('informasi_1', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="devit-card-custom">
                                                         <div class="form-group">
                                                             <label style="font-size: 17px;">Logo Kiri</label>
                                                             <br><img src="<?= base_url('assets/img/surat/' . $surat['text_2']); ?>" style="height: 100px; width: 100px; margin-bottom: 10px" />
@@ -73,6 +77,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="form-group">
                                                         <button type="submit" class="btn btn-custon-four btn-primary mg-t-15">Submit</button>
                                                     </div>
                                                 </div>

@@ -37,17 +37,17 @@
                                     <div class="devit-card-custom">
                                         <div class="form-group">
                                         <label>Nomor Surat</label>
-                                            <input type="text" class="form-control" id="no_surat" name="no_surat" required/>
+                                            <input type="text" class="form-control" id="no_surat" name="no_surat" placeholder="Isi nomor surat" required/>
                                             contoh : 001/IEA/BB/I/2021
                                         </div>
                                         <div class="form-group">
                                         <label>Sifat</label>
-                                            <input type="text" class="form-control" id="sifat" name="sifat" required/>
+                                            <input type="text" class="form-control" id="sifat" name="sifat" placeholder="Isi sifat surat" required/>
                                             contoh : Penting
                                         </div>
                                         <div class="form-group">
                                         <label>Perihal</label>
-                                            <input type="text" class="form-control" id="perihal" name="perihal" required/>
+                                            <input type="text" class="form-control" id="perihal" name="perihal" placeholder="Isi perihal surat" required/>
                                             contoh : Surat Tugas
                                         </div>
                                         <div class="form-group">
@@ -56,15 +56,15 @@
                                         </div>
                                         <div class="form-group">
                                         <label>Kepada</label>
-                                            <input type="text" class="form-control" id="kepada" name="kepada" required/>
+                                            <input type="text" class="form-control" id="kepada" name="kepada" placeholder="Isi nama penerima surat" required/>
                                         </div>
                                         <div class="form-group">
                                         <label>Tempat Penerima Surat</label>
-                                            <input type="text" class="form-control" id="tempat" name="tempat" required/>
+                                            <input type="text" class="form-control" id="tempat" name="tempat" placeholder="Isi tempat penerima surat" required/>
                                         </div>
                                         <div class="form-group">
                                         <label>Isi Surat</label>
-                                            <textarea type="text" class="form-control" id="isi_surat" name="isi_surat" required></textarea>
+                                            <textarea type="text" class="form-control" id="isi_surat" name="isi_surat" placeholder="Isi surat" required></textarea>
                                         </div>
                                         <div class="form-group">
                                         <label style="font-size: 16px;">Anggota Yang Bertugas</label>

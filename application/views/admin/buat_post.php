@@ -34,7 +34,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="review-content-section">
                             <div class="row">
-                                <?= form_open_multipart('admin/buatPost') ?>
+                                <?= form_open_multipart('admin/buatPost', 'autocomplete="off"') ?>
                                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                                     <div class="devit-card-custom">
                                         <div class="form-group">

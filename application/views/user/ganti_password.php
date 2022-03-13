@@ -29,22 +29,22 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="review-content-section">
                             <div class="row">
-                            <?= form_open('user/ganti_password') ?>
+                            <?= form_open('user/ganti_password', 'autocomplete="off"') ?>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="devit-card-custom">
                                         <div class="form-group-inner">
                                             <label>Password Lama</label>
-                                            <input type="text" class="form-control" id="password_lama" name="password_lama" required>
+                                            <input type="text" class="form-control" id="password_lama" name="password_lama" placeholder="Isi password lama anda" required>
                                             <?= form_error('password_lama', '<small class="text-danger pl-3">', '</small>') ?>
                                         </div>
                                         <div class="form-group-inner">
                                             <label>Password Baru</label>
-                                            <input type="password" class="form-control" id="password_baru1" name="password_baru1" required>
+                                            <input type="password" class="form-control" id="password_baru1" name="password_baru1" placeholder="Isi password baru anda" required>
                                             <?= form_error('password_baru1', '<small class="text-danger pl-3">', '</small>') ?>
                                         </div>
                                         <div class="form-group-inner">
                                             <label>Ulangi Password</label>
-                                            <input type="password" class="form-control" id="password_baru2" name="password_baru2" required>
+                                            <input type="password" class="form-control" id="password_baru2" name="password_baru2" placeholder="Ulangi password baru" required>
                                             <?= form_error('password_baru2', '<small class="text-danger pl-3">', '</small>') ?>
                                         </div>
                                     </div>
