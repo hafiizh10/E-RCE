@@ -1,3 +1,0 @@
-Requirement : 
-1. php-7.4.15
-2. mysql-8.0.28

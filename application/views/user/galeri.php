@@ -99,7 +99,7 @@
                             </div>
                             <div class="form-group">
                             <label class="pull-left">Keterangan</label>
-                                <input type="text" class="form-control" id="ket" name="ket" autocomplete="off" required/>
+                                <input type="text" class="form-control" id="ket" name="ket" autocomplete="off" placeholder="Isi keterangan kegiatan" required/>
                             </div>
                             <div class="form-group">
                             <label class="pull-left">Upload Foto</label>

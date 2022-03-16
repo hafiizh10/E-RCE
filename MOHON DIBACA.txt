@@ -1,0 +1,13 @@
+"Mohon aplikasi open source ini jangan diperjual belikan, pembuat aplikasi ini tidak ridho dunia akhirat jika ada menjualnya".
+
+Login aplikasi : 
+1. Admin
+username : admin
+password : admin
+2. User
+username : pengguna
+password : pengguna
+
+Requirement : 
+1. >= php 7.4
+2. composer

@@ -20,6 +20,13 @@
     <!-- jquery
 		============================================ -->
     <script src="<?= base_url('assets/') ?>js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/sweetalert2.all.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/myscript.js"></script>
+    <script>
+        function deleteData() {
+            return confirm("Apakah anda yakin menghapus ini?");
+        }
+    </script>
     <!-- bootstrap JS
 		============================================ -->
     <script src="<?= base_url('assets/') ?>js/bootstrap.min.js"></script>
