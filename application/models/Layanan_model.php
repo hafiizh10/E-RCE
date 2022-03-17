@@ -10,7 +10,7 @@ class Layanan_model extends CI_Model
 		return $idTerakhir;
 	}
 
-    public function tambahLaporan()
+    public function tambahLaporan($data)
     {
         $this->db->select_max('id');
         $query = $this->db->get('tb_laporan');
@@ -18,8 +18,8 @@ class Layanan_model extends CI_Model
 		$idTerakhir = $ret->id;
         $id_laporan = $idTerakhir + 1;
 
-        $laporan = $this->input->post('laporan', true);
-        $waktu = $this->input->post('waktu', true);
+        $laporan = $data['laporan'];
+        $waktu = waktu();
         $latitude = $this->input->post('latitude', true);
         $longitude = $this->input->post('longitude', true);
         $lokasi = $this->input->post('lokasi', true);
@@ -29,7 +29,7 @@ class Layanan_model extends CI_Model
         $data = [
             "id" => $id_laporan,
             "laporan" => htmlspecialchars($laporan),
-            "waktu" => htmlspecialchars($waktu),
+            "waktu" => $waktu,
             "latitude" => htmlspecialchars($latitude),
             "longitude" => htmlspecialchars($longitude),
             "lokasi" => htmlspecialchars($lokasi),

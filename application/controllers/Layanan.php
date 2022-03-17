@@ -29,10 +29,11 @@ class Layanan extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->template->layanan('layanan/form_laporan', $data);
         } else {
-            $this->Layanan_model->tambahLaporan();
+            $this->Layanan_model->tambahLaporan($data);
             $this->session->set_flashdata('message', '<div class="alert alert-info alert-st-two" role="alert">
             <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro" aria-hidden="true"></i>
             <p class="message-mg-rt" style="font-size: 18px;"><b>Laporan anda berhasil dikirim!</b></p></div>');
+            $this->session->set_flashdata('flash', 'Laporan anda berhasil dikirim!');
             redirect('layanan/hasil_laporan/'.$id);
         }
     }
@@ -56,10 +57,11 @@ class Layanan extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->template->layanan('layanan/form_laporan', $data);
         } else {
-            $this->Layanan_model->tambahLaporan();
+            $this->Layanan_model->tambahLaporan($data);
             $this->session->set_flashdata('message', '<div class="alert alert-info alert-st-two" role="alert">
             <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro" aria-hidden="true"></i>
             <p class="message-mg-rt" style="font-size: 18px;"><b>Laporan anda berhasil dikirim!</b></p></div>');
+            $this->session->set_flashdata('flash', 'Laporan anda berhasil dikirim!');
             redirect('layanan/hasil_laporan/'.$id);
         }
     }
@@ -83,10 +85,11 @@ class Layanan extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->template->layanan('layanan/form_laporan', $data);
         } else {
-            $this->Layanan_model->tambahLaporan();
+            $this->Layanan_model->tambahLaporan($data);
             $this->session->set_flashdata('message', '<div class="alert alert-info alert-st-two" role="alert">
             <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro" aria-hidden="true"></i>
             <p class="message-mg-rt" style="font-size: 18px;"><b>Laporan anda berhasil dikirim!</b></p></div>');
+            $this->session->set_flashdata('flash', 'Laporan anda berhasil dikirim!');
             redirect('layanan/hasil_laporan/'.$id);
         }
     }

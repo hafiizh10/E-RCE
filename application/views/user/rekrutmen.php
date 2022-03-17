@@ -105,10 +105,10 @@
                             <?= form_error('no_sim', '<small class="text-danger pl-3">', '</small>') ?>
                         </div>
                         <div class="form-group col-lg-12">
-                            <label class="login2 pull-left pull-left-pro" style="margin-right: 20px;">Jenis Kelamin</label>
-                            <div style="margin-right: 90px;">
-                              <label><input type="radio" value="Laki-laki" name="jk"> <i></i>Laki-Laki</label>
-                              <label><input type="radio" value="Perempuan" name="jk"> <i></i>Perempuan</label>
+                            <label>Jenis Kelamin</label>
+                            <div class="row">
+                              <div class="col-lg-3"><label><input type="radio" value="Laki-laki" name="jk"> <i></i>Laki-Laki</label></div>
+                              <div class="col-lg-5"><label><input type="radio" value="Perempuan" name="jk"> <i></i>Perempuan</label></div>
                             </div>
                         </div>
                         <div class="form-group col-lg-12">

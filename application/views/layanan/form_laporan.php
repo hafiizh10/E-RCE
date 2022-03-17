@@ -40,21 +40,11 @@
                                             <?= form_open('', array('id' => 'form_laporan')); ?>
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                        <div class="form-group" style="display: none;">
-                                                            <label>Jenis Laporan</label>
-                                                            <input type="text" name="laporan" class="form-control" value="<?= $laporan; ?>"  required />
-                                                        </div>
-                                                        <div class="form-group" style="display: none;">
-                                                            <label>Waktu Kejadian</label>
-                                                            <input type="text" name="waktu" class="form-control" value="<?= waktu(); ?>" required />
-                                                        </div>
                                                         <div id="current" style="display: none;"></div>
                                                         <div class="form-group" style="display: none;">
-                                                            <label>Latitude</label>
                                                             <input type="text" id="lat" name="latitude" class="form-control" required />
                                                         </div>
                                                         <div class="form-group" style="display: none;">
-                                                            <label>Longitude</label>
                                                             <input type="text" id="long" name="longitude" class="form-control" required />
                                                         </div>
                                                         <div class="form-group">

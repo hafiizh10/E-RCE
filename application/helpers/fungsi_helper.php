@@ -3,10 +3,8 @@ function waktu()
 {
     date_default_timezone_set('Asia/Kuala_Lumpur');
     $tanggal = mktime(date("m"), date("d"), date("Y"));
-    echo "" . date("d-M-Y", $tanggal) . ", ";
     $jam = date("H:i:s");
-    echo "" . $jam . "";
-    $a = date("H");
+    return date("d-M-Y", $tanggal) . ", " . $jam;
 }
 
 function waktu_giat()

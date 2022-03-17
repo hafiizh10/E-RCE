@@ -6,7 +6,7 @@ $('#tombol_simpan').on('click', function (e) {
         icon: 'warning',
 		allowEscapeKey: false,
 		allowOutsideClick: false,
-		timer: 3000,
+		timer: 2000,
 		onOpen: () => {
 			swal.showLoading();
 		}
