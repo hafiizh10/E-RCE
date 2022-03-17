@@ -9,5 +9,8 @@ username : pengguna
 password : pengguna
 
 Requirement : 
-1. >= php 7.4
-2. composer
+1. >= PHP 7.4
+2. Composer
+3. WhatsApp Gateway (WABLAS)
+4. API Bot Telegram
+5. API Google Maps

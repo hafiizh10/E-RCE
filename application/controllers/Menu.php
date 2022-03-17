@@ -25,6 +25,7 @@ class Menu extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one alert-st-bg" role="alert">
             <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro-clr" aria-hidden="true"></i>
             <p class="message-mg-rt">Menu berhasil ditambahkan!</p></div>');
+            $this->session->set_flashdata('flash', 'Menu berhasil ditambahkan!');
             redirect('menu');
         }
     }
@@ -35,6 +36,7 @@ class Menu extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Menu berhasil dihapus!</p></div>');
+        $this->session->set_flashdata('flash', 'Menu berhasil dihapus!');
         redirect('menu');
     }
 
@@ -44,6 +46,7 @@ class Menu extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Submenu berhasil dihapus!</p></div>');
+        $this->session->set_flashdata('flash', 'Submenu berhasil dihapus!');
         redirect('menu/submenu');
     }
 
@@ -64,6 +67,7 @@ class Menu extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
             <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
             <p class="message-mg-rt">Menu berhasil diubah!</p></div>');
+            $this->session->set_flashdata('flash', 'Menu berhasil diubah!');
             redirect('menu');
         }
     }
@@ -87,6 +91,7 @@ class Menu extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
             <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
             <p class="message-mg-rt">Submenu berhasil diubah!</p></div>');
+            $this->session->set_flashdata('flash', 'Submenu berhasil diubah!');
             redirect('menu/submenu');
         }
     }
@@ -110,6 +115,7 @@ class Menu extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one alert-st-bg" role="alert">
             <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro-clr" aria-hidden="true"></i>
             <p class="message-mg-rt">Submenu berhasil ditambahkan!</p></div>');
+            $this->session->set_flashdata('flash', 'Submenu berhasil ditambahkan!');
             redirect('menu/submenu');
         }
     }

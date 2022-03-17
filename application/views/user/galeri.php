@@ -31,6 +31,9 @@
     <div class="container-fluid">
     <?= form_error('nopol', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
     <?= form_error('merk', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php endif; ?>
     <?= $this->session->flashdata('message'); ?>
     <div class="modal-area-button mg-b-20">
         <a class="Primary mg-b-10" href="#" data-toggle="modal" data-target="#PrimaryModalalert">Tambah Foto Kegiatan</a>

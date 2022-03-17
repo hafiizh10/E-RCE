@@ -20,6 +20,9 @@
         <i class="fa fa-info-circle edu-inform admin-check-pro" aria-hidden="true"></i>
         <p class="message-mg-rt">Aktivasi Bot harus selalu <strong>aktif</strong> agar informasi dapat terus update dikirim lewat Telegram & WhatsApp.</p>
     </div>
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php endif; ?>
     <?= $this->session->flashdata('message'); ?>
         <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

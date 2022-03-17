@@ -21,6 +21,9 @@
         <p class="message-mg-rt">Klik tombol <strong>"Kirim"</strong> jika ingin mengirimkan data laporan lewat Telegram / WhatsApp.</p>
     </div>
     <a href="<?= base_url($peta); ?>"><button type="button" class="btn btn-custon-three btn-danger" style="margin-bottom: 15px;">Peta Seluruh Laporan <?= $tombol; ?></button></a>
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php endif; ?>
     <?= $this->session->flashdata('message'); ?>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -68,7 +71,7 @@
                                         <td><?= cetak($dl['ket']); ?></td>
                                         <td><input type="button" onClick="window.open('<?= base_url('layanan/hasil_laporan/') ?><?= cetak($dl['id']); ?>')" class="btn btn-custon-rounded-four btn-success" value="Kirim" /></td>
                                         <?php if($user['level'] == 'Admin') { ?>
-                                        <td><a href="<?= $hapus; ?><?= cetak($dl['id']); ?>"><button type="button" class="btn btn-custon-rounded-four btn-danger">Hapus</button></a></td>
+                                        <td><a href="<?= $hapus; ?><?= cetak($dl['id']); ?>" onclick="return deleteData()"><button type="button" class="btn btn-custon-rounded-four btn-danger">Hapus</button></a></td>
                                         <?php } ?>
                                     </tr>
                                     <?php endforeach; ?>

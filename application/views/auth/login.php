@@ -138,6 +138,7 @@
                       <?= form_error('password', '<small class="text-danger pl-3">', '</small>') ?>
                   </div>
                   <button class="btn btn-success btn-block loginbtn" type="submit">Login</button>
+                  <input type="button" onclick="location.href='<?= base_url('') ?>';" class="btn btn-success btn-block" value="Kembali Ke Website" />
               <?= form_close(); ?>
           </div>
         </div>

@@ -18,6 +18,9 @@
     <div class="container-fluid">
     <?= form_error('nama_rs', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
     <?= form_error('link_maps', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php endif; ?>
     <?= $this->session->flashdata('message'); ?>
     <div class="modal-area-button mg-b-20">
         <a class="Primary mg-b-10" href="#" data-toggle="modal" data-target="#PrimaryModalalert">Tambah Rumah Sakit</a>
@@ -55,7 +58,7 @@
                                         <td><a href="<?= $rs['link_maps']; ?>" target="_blank" style="color: blue;"><?= $rs['link_maps']; ?></a></td>
                                         <td><div class="btn-group-vertical btn-custom-groups btn-custom-groups-one">
                                             <a href="<?= base_url('admin/edit_rs/') . $rs['id']; ?>"><button type="button" class="btn btn-success">Edit</button></a>
-                                            <a href="<?= base_url('admin/hapus_rs/') . $rs['id']; ?>"><button type="button" class="btn btn-danger">Hapus</button></a>
+                                            <a href="<?= base_url('admin/hapus_rs/') . $rs['id']; ?>" onclick="return deleteData()"><button type="button" class="btn btn-danger">Hapus</button></a>
                                         </div></td>
                                     </tr>
                                     <?php $i++; ?>

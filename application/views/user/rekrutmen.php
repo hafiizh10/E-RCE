@@ -75,6 +75,9 @@
 				<p>Isi formulir dibawah ini dengan benar sesuai dengan keterangan</p>
 			</div>
 			<div class="content-error">
+      <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+      <?php if ($this->session->flashdata('flash')) : ?>
+      <?php endif; ?>
       <?= $this->session->flashdata('message'); ?>
       <?php if ($aplikasi['rekrutmen'] == '1') : ?>
 				<div class="hpanel">
@@ -161,6 +164,8 @@
     <!-- jquery
 		============================================ -->
     <script src="<?= base_url('assets/') ?>js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/sweetalert2.all.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>js/myscript.js"></script>
     <!-- bootstrap JS
 		============================================ -->
     <script src="<?= base_url('assets/') ?>js/bootstrap.min.js"></script>

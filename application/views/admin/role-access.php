@@ -17,6 +17,9 @@
 <!-- Static Table Start -->
 <div class="static-table-area">
     <div class="container-fluid">
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php endif; ?>
     <?= $this->session->flashdata('message'); ?>
         <div class="row">
         <h5 class="col-md-12 m-b-10">Level : <?= $role['role']; ?></h5>

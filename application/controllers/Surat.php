@@ -92,6 +92,7 @@ class Surat extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
             <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
             <p class="message-mg-rt">Kepala Surat berhasil diubah!</p></div>');
+            $this->session->set_flashdata('flash', 'Kepala Surat berhasil diubah!');
             redirect('surat/pengaturan_surat');
         }
     }
@@ -106,6 +107,7 @@ class Surat extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Isi Surat berhasil diubah!</p></div>');
+        $this->session->set_flashdata('flash', 'Isi Surat berhasil diubah!');
         redirect('surat/pengaturan_surat');
     }
 
@@ -124,6 +126,7 @@ class Surat extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Tanda Tangan Surat berhasil diubah!</p></div>');
+        $this->session->set_flashdata('flash', 'Tanda Tangan Surat berhasil diubah!');
         redirect('surat/pengaturan_surat');
     }
 }

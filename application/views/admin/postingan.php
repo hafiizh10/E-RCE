@@ -16,6 +16,9 @@
 <!-- Static Table Start -->
 <div class="data-table-area mg-b-15">
     <div class="container-fluid">
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php endif; ?>
     <?= $this->session->flashdata('message'); ?>
     <a href="<?= base_url('admin/buatPost') ?>"><button type="button" class="btn btn-custon-three btn-danger" style="margin-bottom: 15px;">Buat Berita & Postingan</button></a>
         <div class="row">
@@ -55,7 +58,7 @@
                                             <td><?= $lp['created_at']; ?></a></td>
                                             <td><div class="btn-group-vertical btn-custom-groups btn-custom-groups-one">
                                                 <a href="<?= base_url('admin/edit_postingan/') . $lp['id']; ?>"><button type="button" class="btn btn-success">Edit</button></a>
-                                                <a href="<?= base_url('admin/hapus_postingan/') . $lp['id']; ?>"><button type="button" class="btn btn-danger">Hapus</button></a>
+                                                <a href="<?= base_url('admin/hapus_postingan/') . $lp['id']; ?>" onclick="return deleteData()"><button type="button" class="btn btn-danger">Hapus</button></a>
                                             </div></td>
                                     </tr>
                                     <?php $i++; ?>

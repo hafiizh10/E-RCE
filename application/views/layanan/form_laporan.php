@@ -37,7 +37,7 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="review-content-section">
                                         <div id="dropzone1" class="pro-ad">
-                                            <?= form_open(); ?>
+                                            <?= form_open('', array('id' => 'form_laporan')); ?>
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                         <div class="form-group" style="display: none;">
@@ -73,7 +73,7 @@
                                                 <div class="row">
                                                     <div class="col-lg-2">
                                                         <div class="payment-adress" style="margin-top: 10px;">
-                                                            <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                            <button type="submit" class="btn btn-primary waves-effect waves-light" id="tombol_simpan">Submit</button>
                                                             <input type="button" onclick="location.href='<?= base_url('layanan') ?>';" class="btn btn-danger loginbtn" value="Kembali" />
                                                         </div>
                                                     </div>

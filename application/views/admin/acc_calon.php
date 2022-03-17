@@ -69,7 +69,7 @@
                                             <input type="text" class="form-control" name="username" required>
                                         </div>
                                         <div class="form-group">
-                                        <label>Passoword</label>
+                                        <label>Password</label>
                                             <input type="text" class="form-control" name="password" required>
                                         </div>
                                         <button type="submit" class="btn btn-custon-four btn-primary">Submit</button>

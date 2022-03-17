@@ -18,7 +18,9 @@
         <div class="static-table-area">
             <div class="container-fluid">
             <?= form_error('menu', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
-
+            <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+            <?php if ($this->session->flashdata('flash')) : ?>
+            <?php endif; ?>
             <?= $this->session->flashdata('message'); ?>
                 <div class="modal-area-button mg-b-20">
                     <a class="Primary mg-b-10" href="#" data-toggle="modal" data-target="#PrimaryModalalert">Tambah Menu Baru</a>
@@ -43,7 +45,7 @@
                                                 <td><?= $i; ?></td>
                                                 <td><?= $m['menu']; ?></td>
                                                 <td><a href="<?= base_url(); ?>menu/edit_menu/<?= $m['id'] ?>" class="btn btn-custon-rounded-four btn-success">Edit</a>
-                                                <a href="<?= base_url(); ?>menu/hapus_menu/<?= $m['id'] ?>" class="btn btn-custon-rounded-four btn-danger">Hapus</a></td>
+                                                <a href="<?= base_url(); ?>menu/hapus_menu/<?= $m['id'] ?>" class="btn btn-custon-rounded-four btn-danger tombol-hapus">Hapus</a></td>
                                             </tr>
                                             <?php $i++; ?>
                                             <?php endforeach; ?>

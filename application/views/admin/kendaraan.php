@@ -22,6 +22,9 @@
     <?= form_error('no_rangka', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
     <?= form_error('no_mesin', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
     <?= form_error('fungsi', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php endif; ?>
     <?= $this->session->flashdata('message'); ?>
     <div class="modal-area-button mg-b-20">
         <a class="Primary mg-b-10" href="#" data-toggle="modal" data-target="#PrimaryModalalert">Tambah Kendaraan Operasional</a>
@@ -69,7 +72,7 @@
                                         <td><?= $ko['ket']; ?></a></td>
                                         <td><div class="btn-group-vertical btn-custom-groups btn-custom-groups-one">
                                             <a href="<?= base_url('admin/edit_kendaraan/') . $ko['id']; ?>"><button type="button" class="btn btn-success">Edit</button></a>
-                                            <a href="<?= base_url('admin/hapus_kendaraan/') . $ko['id']; ?>"><button type="button" class="btn btn-danger">Hapus</button></a>
+                                            <a href="<?= base_url('admin/hapus_kendaraan/') . $ko['id']; ?>" onclick="return deleteData()"><button type="button" class="btn btn-danger">Hapus</button></a>
                                         </div></td>
                                     </tr>
                                     <?php $i++; ?>

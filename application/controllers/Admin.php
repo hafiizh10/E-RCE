@@ -48,6 +48,7 @@ class Admin extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one alert-st-bg" role="alert">
             <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro-clr" aria-hidden="true"></i>
             <p class="message-mg-rt">Level berhasil ditambahkan!</p></div>');
+            $this->session->set_flashdata('flash', 'Level berhasil ditambahkan!');
             redirect('admin/role');
         }
     }
@@ -58,6 +59,7 @@ class Admin extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Level berhasil dihapus!</p></div>');
+        $this->session->set_flashdata('flash', 'Level berhasil dihapus!');
         redirect('admin/role');
     }
 
@@ -78,6 +80,7 @@ class Admin extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
             <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
             <p class="message-mg-rt">Level berhasil diubah!</p></div>');
+            $this->session->set_flashdata('flash', 'Level berhasil diubah!');
             redirect('admin/role');
         }
     }
@@ -115,6 +118,7 @@ class Admin extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Akses level berhasil diubah!</p></div>');
+        $this->session->set_flashdata('flash', 'Akses level berhasil diubah!');
     }
 
     public function user()
@@ -201,6 +205,7 @@ class Admin extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one alert-st-bg" role="alert">
             <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro-clr" aria-hidden="true"></i>
             <p class="message-mg-rt">Rumah sakit berhasil ditambahkan!</p></div>');
+            $this->session->set_flashdata('flash', 'Rumah sakit berhasil ditambahkan!');
             redirect('admin/tambah_rs');
         }
     }
@@ -211,6 +216,7 @@ class Admin extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Data RS berhasil dihapus!</p></div>');
+        $this->session->set_flashdata('flash', 'Data RS berhasil dihapus!');
         redirect('admin/tambah_rs');
     }
 
@@ -229,7 +235,8 @@ class Admin extends CI_Controller
             $this->Admin_model->editDataRs();
             $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
             <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
-            <p class="message-mg-rt">Data rumah sakit berhasil diubah!</p></div>');
+            <p class="message-mg-rt">Data RS berhasil diubah!</p></div>');
+            $this->session->set_flashdata('flash', 'Data RS berhasil diubah!');
             redirect('admin/tambah_rs');
         }
     }
@@ -250,6 +257,7 @@ class Admin extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Data calon anggota berhasil dihapus!</p></div>');
+        $this->session->set_flashdata('flash', 'Data calon anggota berhasil dihapus!');
         redirect('admin/calon_anggota');
     }
 
@@ -283,6 +291,7 @@ class Admin extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one alert-st-bg" role="alert">
             <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro-clr" aria-hidden="true"></i>
             <p class="message-mg-rt">Kendaraan Operasional berhasil ditambahkan!</p></div>');
+            $this->session->set_flashdata('flash', 'Kendaraan Operasional berhasil ditambahkan!');
             redirect('admin/kendaraan');
         }
     }
@@ -307,6 +316,7 @@ class Admin extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
             <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
             <p class="message-mg-rt">Data kendaraan berhasil diubah!</p></div>');
+            $this->session->set_flashdata('flash', 'Data kendaraan berhasil diubah!');
             redirect('admin/kendaraan');
         }
     }
@@ -317,6 +327,7 @@ class Admin extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Kendaraan Operasional berhasil dihapus!</p></div>');
+        $this->session->set_flashdata('flash', 'Kendaraan Operasional berhasil dihapus!');
         redirect('admin/kendaraan');
     }
 
@@ -345,6 +356,7 @@ class Admin extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one alert-st-bg" role="alert">
             <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro-clr" aria-hidden="true"></i>
             <p class="message-mg-rt">Postingan berhasil ditambahkan!</p></div>');
+            $this->session->set_flashdata('flash', 'Postingan berhasil ditambahkan!');
             redirect('admin/postingan');
         }
     }
@@ -355,6 +367,7 @@ class Admin extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Postingan berhasil dihapus!</p></div>');
+        $this->session->set_flashdata('flash', 'Postingan berhasil dihapus!');
         redirect('admin/postingan');
     }
 
@@ -374,6 +387,7 @@ class Admin extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
             <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
             <p class="message-mg-rt">Postingan berhasil diubah!</p></div>');
+            $this->session->set_flashdata('flash', 'Postingan berhasil diubah!');
             redirect('admin/postingan');
         }
     }

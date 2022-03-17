@@ -20,6 +20,9 @@
         <i class="fa fa-info-circle edu-inform admin-check-pro" aria-hidden="true"></i>
         <p class="message-mg-rt">Klik tombol <strong>"Lihat Data"</strong> untuk melihat data lengkap korban.</p>
     </div>
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php endif; ?>
     <?= $this->session->flashdata('message'); ?>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -69,7 +72,7 @@
                                         <td><?= cetak($lg['rs']); ?></td>
                                         <td><a href="<?= base_url('fitur/data_korban/') ?><?= cetak($lg['id']); ?>"><button type="button" class="btn btn-custon-rounded-four btn-success">Lihat Data</button></a></td>
                                         <?php if($user['level'] == 'Admin') { ?>
-                                        <td><a href="<?= base_url('fitur/hapus_giat/') ?><?= cetak($lg['id']); ?>"><button type="button" class="btn btn-custon-rounded-four btn-danger">Hapus</button></a></td>
+                                        <td><a href="<?= base_url('fitur/hapus_giat/') ?><?= cetak($lg['id']); ?>" onclick="return deleteData()"><button type="button" class="btn btn-custon-rounded-four btn-danger">Hapus</button></a></td>
                                         <?php } ?>
                                     </tr>
                                     <?php endforeach; ?>

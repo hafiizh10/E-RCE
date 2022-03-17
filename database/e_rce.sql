@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 13, 2022 at 02:59 PM
+-- Generation Time: Mar 17, 2022 at 07:06 AM
 -- Server version: 8.0.28
 -- PHP Version: 7.4.15
 
@@ -47,8 +47,8 @@ CREATE TABLE `tb_calon` (
 --
 
 INSERT INTO `tb_calon` (`id`, `nama`, `nopol_calon`, `nik`, `no_sim`, `jk`, `ttl`, `alamat`, `pekerjaan`, `no_tlp`, `email`, `is_active`) VALUES
-(11, 'Hafiizh Zoelva', 'DA 6654 A', '3271046504931234', '123456789012', 'Laki-laki', 'Banjarbaru, 2000/05/09', 'Komplek Saadah 2, Jl.Muslimin No.21A Rt.15 Rw.04, Sungai Paring, Martapura Kota', 'Mahasiswa', '08214623542', 'zoelva@mail.com', 0),
-(16, 'Zoelva Khairani', 'DA 6654 A', '3271046504931234', '123456789012', 'Laki-laki', 'Banjarbaru, 2000/05/10', 'Komplek Saadah 2, Jl.Muslimin No.21A Rt.15 Rw.04, Sungai Paring, Martapura Kota', 'Mahasiswa', '08214623542', 'email@gmail.com', 0);
+(1, 'Hafiizh Zoelva', 'DA 6654 A', '3271046504931234', '123456789012', 'Laki-laki', 'Banjarbaru, 2000/05/09', 'Komplek Saadah 2, Jl.Muslimin No.21A Rt.15 Rw.04, Sungai Paring, Martapura Kota', 'Mahasiswa', '08214623542', 'zoelva@mail.com', 0),
+(2, 'Zoelva Khairani', 'DA 6654 A', '3271046504931234', '123456789012', 'Laki-laki', 'Banjarbaru, 2000/05/10', 'Komplek Saadah 2, Jl.Muslimin No.21A Rt.15 Rw.04, Sungai Paring, Martapura Kota', 'Mahasiswa', '08214623542', 'email@gmail.com', 0);
 
 -- --------------------------------------------------------
 
@@ -371,7 +371,7 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id`, `nama`, `nopol_user`, `jk`, `alamat`, `tlp_user`, `jabatan`, `nra`, `email`, `username`, `password`, `level`, `image`, `role_id`) VALUES
-(1, 'Admin', 'DA 6420 BBD', 'Laki-laki', 'Komplek Saadah 2, Jl.Muslimin No.21A Rt.15 Rw.04, Sungai Paring, Martapura Kota', '082157254820', 'Anggota', 'BB-305-012', 'hafiizh10@gmail.com', 'admin', '$2y$10$PjUtP/M2SPuN8h3niJYFxeTixbFO88GfGWLcH57gHghjm8ioRqn5O', 'Admin', 'default.jpg', 1),
+(1, 'Admin', 'DA 6420 BBD', 'Laki-laki', 'Komplek Saadah 2, Jl.Muslimin No.21A Rt.15 Rw.04, Sungai Paring, Martapura Kota', '082157254820', 'Anggota', 'BB-305-012', 'hafiizh10@gmail.com', 'admin', '$2y$10$jpZnCQdGmQksPD3Bw88yK.OZSMelo8HVnROH2uxxOfMUOmYydB5Rq', 'Admin', 'default.jpg', 1),
 (17, 'Pengguna', 'DA 8364 BA', 'Laki-laki', 'Komplek Citra Graha Banjarbaru KM.9 Kalimantan Selatan', '08212534273', 'Anggota', 'BB-305-112', 'hafiizh10@gmail.com', 'pengguna', '$2y$10$czq4TfYbBTJImGxBi.7hLOotLEQBK8wAC9T9ZNFNISJ3qIoz9YNIy', 'User', 'default.jpg', 2);
 
 -- --------------------------------------------------------
@@ -588,7 +588,7 @@ ALTER TABLE `user_sub_menu`
 -- AUTO_INCREMENT for table `tb_calon`
 --
 ALTER TABLE `tb_calon`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `tb_galeri`
@@ -600,13 +600,13 @@ ALTER TABLE `tb_galeri`
 -- AUTO_INCREMENT for table `tb_kendaraan`
 --
 ALTER TABLE `tb_kendaraan`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tb_korban`
 --
 ALTER TABLE `tb_korban`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `tb_laporan`
@@ -636,13 +636,13 @@ ALTER TABLE `tb_postingan`
 -- AUTO_INCREMENT for table `tb_rs`
 --
 ALTER TABLE `tb_rs`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `user_access_menu`
@@ -654,19 +654,19 @@ ALTER TABLE `user_access_menu`
 -- AUTO_INCREMENT for table `user_menu`
 --
 ALTER TABLE `user_menu`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `user_role`
 --
 ALTER TABLE `user_role`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

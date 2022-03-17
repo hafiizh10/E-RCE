@@ -20,6 +20,9 @@
         <i class="fa fa-info-circle edu-inform admin-check-pro" aria-hidden="true"></i>
         <p class="message-mg-rt">Klik tombol <strong>"Terima"</strong> jika ingin memasukan calon anggota ke data anggota.</p>
     </div>
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php endif; ?>
     <?= $this->session->flashdata('message'); ?>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -78,7 +81,7 @@
                                             <?php } else { ?>
                                                 <a href="<?= base_url('admin/acc_calon/') . $ca['id']; ?>"><button type="button" class="btn btn-success">Terima</button></a>
                                             <?php } ?>
-                                                <a href="<?= base_url('admin/hapus_calon/') . $ca['id']; ?>"><button type="button" class="btn btn-danger">Hapus&nbsp</button></a>
+                                                <a href="<?= base_url('admin/hapus_calon/') . $ca['id']; ?>" onclick="return deleteData()"><button type="button" class="btn btn-danger">Hapus&nbsp</button></a>
                                             </div></td>
                                     </tr>
                                     <?php $i++; ?>

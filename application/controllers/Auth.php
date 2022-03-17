@@ -55,7 +55,7 @@ class Auth extends CI_Controller
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
                 <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
-                <p class="message-mg-rt">Password anda salah!</p></div>');
+                <p class="message-mg-rt">Username / Password anda salah!</p></div>');
                 redirect('auth');
             }
         } else {

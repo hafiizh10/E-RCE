@@ -32,6 +32,7 @@ class Pengaturan extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
             <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
             <p class="message-mg-rt">Aplikasi berhasil diubah!</p></div>');
+            $this->session->set_flashdata('flash', 'Aplikasi berhasil diubah!');
             redirect('pengaturan/aplikasi');
         }
     }
@@ -44,9 +45,10 @@ class Pengaturan extends CI_Controller
         if ($upload_image) {
             $config['allowed_types'] = 'gif|jpg|png';
             $config['max_size'] = '2048';
-            $config['upload_path'] = './assets/img/';
+            $config['upload_path'] = './assets/img/aplikasi/';
 
             $this->load->library('upload', $config);
+            $data['aplikasi'] = $this->db->get_where('tb_pengaturan', ['id' => '1'])->row_array();
             $old_image = $data['aplikasi']['image'];
             unlink(FCPATH . 'assets/img/' . $old_image);
             if ($this->upload->do_upload('image')) {
@@ -60,7 +62,11 @@ class Pengaturan extends CI_Controller
         }
 
         $this->db->where('id', $this->input->post('id'));
-        $this->db->update('tb_pengaturan', $data);
+        $this->db->update('tb_pengaturan');
+        $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
+        <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
+        <p class="message-mg-rt">Logo aplikasi berhasil diubah!</p></div>');
+        $this->session->set_flashdata('flash', 'Logo aplikasi berhasil diubah!');
         redirect('pengaturan/aplikasi');
     }
 
@@ -70,6 +76,7 @@ class Pengaturan extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Halaman rekrutmen berhasil diubah!</p></div>');
+        $this->session->set_flashdata('flash', 'Halaman rekrutmen berhasil diubah!');
         redirect('pengaturan/aplikasi');
     }
 
@@ -91,6 +98,7 @@ class Pengaturan extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
             <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
             <p class="message-mg-rt">API Bot Telegram berhasil diubah!</p></div>');
+            $this->session->set_flashdata('flash', 'API Bot Telegram berhasil diubah!');
             redirect('pengaturan/api');
         }
     }
@@ -101,6 +109,7 @@ class Pengaturan extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">API Bot WhatsApp berhasil diubah!</p></div>');
+        $this->session->set_flashdata('flash', 'API Bot WhatsApp berhasil diubah!');
         redirect('pengaturan/api');
     }
 
@@ -128,6 +137,7 @@ class Pengaturan extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
             <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
             <p class="message-mg-rt">Pengaturan Website berhasil diubah!</p></div>');
+            $this->session->set_flashdata('flash', 'Pengaturan Website berhasil diubah!');
             redirect('pengaturan/website');
         }
     }
@@ -154,6 +164,7 @@ class Pengaturan extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Slideshow website berhasil diubah!</p></div>');
+        $this->session->set_flashdata('flash', 'Slideshow website berhasil diubah!');
         redirect('pengaturan/website');
     }
 
@@ -162,7 +173,8 @@ class Pengaturan extends CI_Controller
         $this->Pengaturan_model->footerInformasi();
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
-        <p class="message-mg-rt">Inforasi footer berhasil diubah!</p></div>');
+        <p class="message-mg-rt">Informasi footer berhasil diubah!</p></div>');
+        $this->session->set_flashdata('flash', 'Informasi footer berhasil diubah!');
         redirect('pengaturan/website');
     }
 
@@ -172,6 +184,7 @@ class Pengaturan extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Call Center & Media Sosial berhasil diubah!</p></div>');
+        $this->session->set_flashdata('flash', 'Call Center & Media Sosial berhasil diubah!');
         redirect('pengaturan/website');
     }
 }

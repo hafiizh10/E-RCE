@@ -94,6 +94,7 @@ class User extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one alert-st-bg" role="alert">
             <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro-clr" aria-hidden="true"></i>
             <p class="message-mg-rt">Data profil berhasil diganti!</p></div>');
+            $this->session->set_flashdata('flash', 'Data profil berhasil diganti!');
             redirect('user');
         }
     }
@@ -133,6 +134,7 @@ class User extends CI_Controller
                     $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one alert-st-bg" role="alert">
                     <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro-clr" aria-hidden="true"></i>
                     <p class="message-mg-rt">Password berhasil diganti!</p></div>');
+                    $this->session->set_flashdata('flash', 'Password berhasil diganti!');
                     redirect('user/ganti_password');
                 }
             }
@@ -165,6 +167,7 @@ class User extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one alert-st-bg" role="alert">
             <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro-clr" aria-hidden="true"></i>
             <p class="message-mg-rt">Foto kegiatan berhasil ditambahkan!</p></div>');
+            $this->session->set_flashdata('flash', 'Foto kegiatan berhasil ditambahkan!');
             redirect('user/galeri');
         }
     }
@@ -175,6 +178,7 @@ class User extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-warning alert-st-three alert-st-bg2" role="alert">
         <i class="fa fa-exclamation-triangle edu-warning-danger admin-check-pro admin-check-pro-clr2" aria-hidden="true"></i>
         <p class="message-mg-rt">Foto kegiatan berhasil dihapus!</p></div>');
+        $this->session->set_flashdata('flash', 'Foto kegiatan berhasil dihapus!');
         redirect('user/galeri');
     }
 }

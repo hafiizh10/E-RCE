@@ -25,6 +25,7 @@ class Rekrutmen extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one alert-st-bg" role="alert">
             <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro-clr" aria-hidden="true"></i>
             <p class="message-mg-rt">Data anda berhasil dikirim!</p></div>');
+            $this->session->set_flashdata('flash', 'Data anda berhasil dikirim!');
             redirect('rekrutmen');
         }
     }

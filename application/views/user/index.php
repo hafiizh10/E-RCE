@@ -16,6 +16,9 @@
 </div>
 <div class="single-pro-review-area mt-t-30 mg-b-15">
     <div class="container-fluid">
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php endif; ?>
     <?= $this->session->flashdata('message'); ?>
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
