@@ -129,85 +129,51 @@ class Layanan extends CI_Controller
 
     public function telegram($id)
     {
-        $data['api'] = $this->Layanan_model->Telegram_api();
-
         $row = $this->Layanan_model->getLaporanById($id);
-        if (isset($row))
+        if(isset($row))
         {
-            $id_laporan = $id;
-            $laporan = $row['laporan'];
-            $waktu = $row['waktu'];
-            $latitude = $row['latitude'];
-            $longitude = $row['longitude'];
-            $lokasi = $row['lokasi'];
-            $ket = $row['ket'];
-            $link = base_url('layanan/hasil_laporan/' . $id);
+            $data = [
+                "id" => $id,
+                "laporan" => $row['laporan'],
+                "waktu" => $row['waktu'],
+                "latitude" => $row['latitude'],
+                "longitude" => $row['longitude'],
+                "lokasi" => $row['lokasi'],
+                "ket" => $row['ket']
+            ];
+            $this->Layanan_model->Telegram_api($data);
+        } else {
+            return redirect('/');
         }
-        
-        $aktif = 1;
-        if($aktif == $data['api']['bot_active']){
-        $token = $data['api']['token'];
-        $pesan = [
-        'text' => "Laporan Masuk Dari Aplikasi [E-RCE]\n===========================\nKode Laporan = $id_laporan\nJenis Laporan = $laporan\nWaktu Kejadian = $waktu\nLokasi Kejadian = $lokasi\nKeterangan = $ket\nLink Laporan = $link\n\nBuka Google Maps = https://www.google.com/maps/place/$latitude+$longitude/@$latitude,$longitude,15z",
-        'chat_id' => $data['api']['chat_id']
-        ];
-        file_get_contents("https://api.telegram.org/bot$token/sendMessage?" . http_build_query($pesan));
-        };
-
         $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one" role="alert">
         <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro" aria-hidden="true"></i>
         <p class="message-mg-rt" style="font-size: 18px;"><b>Laporan anda berhasil dikirim lewat telegram kami!</b></p></div>');
+        $this->session->set_flashdata('flash', 'Laporan anda berhasil dikirim!');
         redirect('layanan/hasil_laporan/'.$id);
     }
 
     public function whatsapp($id)
     {
-        $data['api'] = $this->Layanan_model->WhatsApp_api();
-
         $row = $this->Layanan_model->getLaporanById($id);
-        if (isset($row))
+        if(isset($row))
         {
-            $id_laporan = $id;
-            $laporan = $row['laporan'];
-            $waktu = $row['waktu'];
-            $latitude = $row['latitude'];
-            $longitude = $row['longitude'];
-            $lokasi = $row['lokasi'];
-            $ket = $row['ket'];
-            $link = base_url('layanan/hasil_laporan/' . $id);
+            $data = [
+                "id" => $id,
+                "laporan" => $row['laporan'],
+                "waktu" => $row['waktu'],
+                "latitude" => $row['latitude'],
+                "longitude" => $row['longitude'],
+                "lokasi" => $row['lokasi'],
+                "ket" => $row['ket']
+            ];
+            $this->Layanan_model->WhatsApp_api($data);
+        } else {
+            return redirect('/');
         }
-        $pesan = "Laporan Masuk Dari Aplikasi [E-RCE]\n===========================\nKode Laporan = $id_laporan\nJenis Laporan = $laporan\nWaktu Kejadian = $waktu\nLokasi Kejadian = $lokasi\nKeterangan = $ket\nLink Laporan = $link\n\nBuka Google Maps = https://www.google.com/maps/place/$latitude+$longitude/@$latitude,$longitude,15z";
-        
-        $aktif = 1;
-        if($aktif == $data['api']['bot_active']){
-        $curl = curl_init();
-        $token = $data['api']['token'];
-        $domain_api = $data['api']['image'];
-        $data = [
-            'phone' => $data['api']['chat_id'],
-            'message' => $pesan,
-            'secret' => true,
-            'priority' => true,
-        ];
-
-        curl_setopt($curl, CURLOPT_HTTPHEADER,
-            array(
-                "Authorization: $token",
-            )
-        );
-        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
-        curl_setopt($curl, CURLOPT_URL, "$domain_api/api/send-message");
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-        $result = curl_exec($curl);
-        curl_close($curl);
-        };
-
         $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one" role="alert">
         <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro" aria-hidden="true"></i>
         <p class="message-mg-rt" style="font-size: 18px;"><b>Laporan anda berhasil dikirim lewat WhatsApp kami!</b></p></div>');
+        $this->session->set_flashdata('flash', 'Laporan anda berhasil dikirim!');
         redirect('layanan/hasil_laporan/'.$id);
     }
 }

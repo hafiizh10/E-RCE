@@ -85,8 +85,8 @@ class Pengaturan extends CI_Controller
         $data['title'] = 'Pengaturan API';
         $data['user'] = $this->db->get_where('tb_user', ['username' => $this->session->userdata('username')])->row_array();
 
-        $data['api'] = $this->Layanan_model->Telegram_api();
-        $data['api_wa'] = $this->Layanan_model->WhatsApp_api();
+        $data['api'] = $this->Layanan_model->getAPItelegram();
+        $data['api_wa'] = $this->Layanan_model->getAPIwa();
         
         $this->form_validation->set_rules('chat_id', 'Chat ID', 'required');
         $this->form_validation->set_rules('token', 'Token', 'required');

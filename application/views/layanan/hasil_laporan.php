@@ -86,9 +86,8 @@
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="button-style-three" style="margin-top: 10px;">
-                                                            <a href="<?= base_url('layanan/telegram/'.$laporan['id']) ?>"><button type="button" class="btn btn-custon-three btn-primary" id="button">Kirim Laporan</button></a>
+                                                            <a href="<?= base_url('layanan/telegram/'.$laporan['id']) ?>"><button type="button" class="btn btn-custon-three btn-primary" id="button">Kirim Lewat Telegram</button></a>
                                                             <a href="<?= base_url('layanan/whatsapp/'.$laporan['id']) ?>"><button type="button" class="btn btn-custon-three btn-success" id="button">Kirim Lewat WA</button></a>
-                                                            <a href="<?= base_url('layanan/sms/'.$laporan['id']) ?>"><button type="button" class="btn btn-custon-three btn-warning" id="button">Kirim Lewat SMS</button></a>
                                                             <input type="button" onclick="location.href='<?= base_url('layanan') ?>';" class="btn btn-danger loginbtn" id="button" value="Kembali" />
                                                         </div>
                                                     </div>

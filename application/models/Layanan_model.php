@@ -24,7 +24,6 @@ class Layanan_model extends CI_Model
         $longitude = $this->input->post('longitude', true);
         $lokasi = $this->input->post('lokasi', true);
         $ket = $this->input->post('ket', true);
-        $link = base_url('layanan/hasil_laporan/' . $id_laporan);
 
         $data = [
             "id" => $id_laporan,
@@ -35,15 +34,50 @@ class Layanan_model extends CI_Model
             "lokasi" => htmlspecialchars($lokasi),
             "ket" => htmlspecialchars($ket)
         ];
-        
+
+        /*
+        | ---------------------------------------------------------------
+        | Kirim notifikasi ke Telegram & WhatsApp
+        | ---------------------------------------------------------------
+        */
+        $this->Telegram_api($data);
+        $this->WhatsApp_api($data);
+
+        $this->db->insert('tb_laporan', $data);
+    }
+
+    public function getLaporanById($id)
+    {
+        $data = $this->db->get_where('tb_laporan', array('id' => $id));
+        if ($data->num_rows() == 0) {
+            echo '<script>window.history.back()</script>';
+        } else {
+            return $this->db->get_where('tb_laporan', ['id' => $id])->row_array();
+        }
+    }
+
+    public function maps($id)
+    {
+        return $this->db->get_where('tb_laporan', ['id' => $id])->result();
+    }
+
+    public function Telegram_api($data)
+    {
+        $id_laporan = $data['id'];
+        $laporan = $data['laporan'];
+        $waktu = $data['waktu'];
+        $lokasi = $data['lokasi'];
+        $ket = $data['ket'];
+        $latitude = $data['latitude'];
+        $longitude = $data['longitude'];
+        $link = base_url('layanan/hasil_laporan/' . $id_laporan);
+        $bot['api'] = $this->db->get_where('tb_pengaturan', ['id' => '2'])->row_array();
         /*
         | ---------------------------------------------------------------
         | API Telegram Untuk Notifikasi
         | ---------------------------------------------------------------
         */
-        $bot['api'] = $this->Telegram_api();
-        $aktif = 1;
-        if($aktif == $bot['api']['bot_active']){
+        if($bot['api']['bot_active'] == 1){
         $token = $bot['api']['token'];
         $pesan = [
         'text' => "Laporan Masuk Dari Aplikasi [E-RCE]\n===========================\nKode Laporan = $id_laporan\nJenis Laporan = $laporan\nWaktu Kejadian = $waktu\nLokasi Kejadian = $lokasi\nKeterangan = $ket\nLink Laporan = $link\n\nBuka Google Maps = https://www.google.com/maps/place/$latitude+$longitude/@$latitude,$longitude,15z\n===========================",
@@ -51,14 +85,21 @@ class Layanan_model extends CI_Model
         ];
         file_get_contents("https://api.telegram.org/bot$token/sendMessage?" . http_build_query($pesan));
         };
-        /*
-        | ---------------------------------------------------------------
-        | API WhatsApp Untuk Notifikasi
-        | ---------------------------------------------------------------
-        */
-        $bot['api_wa'] = $this->WhatsApp_api();
-        $aktif = 1;
-        if($aktif == $bot['api_wa']['bot_active']){
+    }
+
+    public function WhatsApp_api($data)
+    {
+        $id_laporan = $data['id'];
+        $laporan = $data['laporan'];
+        $waktu = $data['waktu'];
+        $lokasi = $data['lokasi'];
+        $ket = $data['ket'];
+        $latitude = $data['latitude'];
+        $longitude = $data['longitude'];
+        $link = base_url('layanan/hasil_laporan/' . $id_laporan);
+        $bot['api_wa'] = $this->db->get_where('tb_pengaturan', ['id' => '3'])->row_array();
+
+        if($bot['api_wa']['bot_active'] == 1){
         $curl = curl_init();
         $pesan_wa = "Laporan Masuk Dari Aplikasi [E-RCE]\n===========================\nKode Laporan = $id_laporan\nJenis Laporan = $laporan\nWaktu Kejadian = $waktu\nLokasi Kejadian = $lokasi\nKeterangan = $ket\nLink Laporan = $link\n\nBuka Google Maps = https://www.google.com/maps/place/$latitude+$longitude/@$latitude,$longitude,15z\n===========================";
 
@@ -85,31 +126,14 @@ class Layanan_model extends CI_Model
         $result = curl_exec($curl);
         curl_close($curl);
         };
-
-        $this->db->insert('tb_laporan', $data);
     }
 
-    public function getLaporanById($id)
-    {
-        $data = $this->db->get_where('tb_laporan', array('id' => $id));
-        if ($data->num_rows() == 0) {
-            echo '<script>window.history.back()</script>';
-        } else {
-            return $this->db->get_where('tb_laporan', ['id' => $id])->row_array();
-        }
-    }
-
-    public function maps($id)
-    {
-        return $this->db->get_where('tb_laporan', ['id' => $id])->result();
-    }
-
-    public function Telegram_api()
+    public function getAPItelegram()
     {
         return $this->db->get_where('tb_pengaturan', ['id' => '2'])->row_array();
     }
 
-    public function WhatsApp_api()
+    public function getAPIwa()
     {
         return $this->db->get_where('tb_pengaturan', ['id' => '3'])->row_array();
     }
