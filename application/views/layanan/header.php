@@ -71,7 +71,6 @@
     <script>
         function initialize() {
             if (geo_position_js.init()) {
-                document.getElementById('current').innerHTML = "Receiving...";
                 geo_position_js.getCurrentPosition(show_position, function() {
                     document.getElementById('current').innerHTML = "Couldn't get location"
                 }, {
@@ -83,7 +82,6 @@
         }
 
         function show_position(p) {
-            document.getElementById('current').innerHTML = "latitude=" + p.coords.latitude.toFixed(2) + " longitude=" + p.coords.longitude.toFixed(2);
             var lat = document.getElementById("lat").value;
             document.getElementById("lat").value = p.coords.latitude.toFixed(8);
             var long = document.getElementById("long").value;

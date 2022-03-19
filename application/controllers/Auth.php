@@ -73,7 +73,7 @@ class Auth extends CI_Controller
 
         $this->session->set_flashdata('message', '<div class="alert alert-success alert-st-one alert-st-bg" role="alert">
         <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro-clr" aria-hidden="true"></i>
-        <p class="message-mg-rt">Akun anda berhasil keluar!</p></div>');
+        <p class="message-mg-rt">Akun anda berhasil di logout!</p></div>');
         redirect('auth');
     }
 

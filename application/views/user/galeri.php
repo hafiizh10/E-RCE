@@ -66,7 +66,7 @@
                                         <td><?= $lf['created_at']; ?></td>
                                         <td class="galeri"><img src="<?= base_url('assets/img/galeri/' . $lf['image']); ?>"/></td>
                                         <?php if($user['level'] == 'Admin') { ?>
-                                        <td><a href="<?= base_url('user/hapus_foto/') . $lf['id']; ?>"><button type="button" class="btn btn-danger">Hapus</button></a></td>
+                                        <td><a href="<?= base_url('user/hapus_foto/') . $lf['id']; ?>"><button type="button" class="btn btn-danger tombol-hapus">Hapus</button></a></td>
                                         <?php } ?>
                                     </tr>
                                     <?php $i++; ?>

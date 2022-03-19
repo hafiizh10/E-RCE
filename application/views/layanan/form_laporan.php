@@ -39,7 +39,7 @@
                                         <div id="dropzone1" class="pro-ad">
                                             <?= form_open('', array('id' => 'form_laporan')); ?>
                                                 <div class="row">
-                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                                                         <div id="current" style="display: none;"></div>
                                                         <div class="form-group" style="display: none;">
                                                             <input type="text" id="lat" name="latitude" class="form-control" required />
@@ -55,7 +55,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Keterangan Kejadian</label>
-                                                            <input type="text" name="ket" class="form-control" placeholder="Tulis keterangan jika ada" required />
+                                                            <textarea name="ket" cols="20" rows="10" class="form-control" placeholder="Tulis keterangan jika ada" required></textarea>
                                                             *Contoh : <?= $ket; ?>
                                                         </div>
                                                     </div>
