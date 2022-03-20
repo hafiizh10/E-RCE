@@ -1,13 +1,13 @@
-<h1 align="center">**Aplikasi Respon Cepat Emergency (E-RCE)**</h1>
+**<h1 align="center">Aplikasi Respon Cepat Emergency (E-RCE)</h1>**
 
-"Mohon aplikasi open source ini jangan diperjual belikan, pembuat aplikasi ini tidak ridho dunia akhirat jika ada menjualnya".
+**⚠️"Mohon aplikasi open source ini jangan diperjual belikan, pembuat aplikasi ini tidak ridho dunia akhirat jika ada menjualnya".⚠️**
 
 Login aplikasi : 
-1. Admin
-username : admin
+1. Admin<br>
+username : admin<br>
 password : admin
-2. User
-username : pengguna
+2. User<br>
+username : pengguna<br>
 password : pengguna
 
 Requirement : 
