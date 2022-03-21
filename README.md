@@ -1,6 +1,75 @@
 **<h1 align="center">Aplikasi Respon Cepat Emergency (E-RCE)</h1>**
 
-**⚠️"Mohon aplikasi open source ini jangan diperjual belikan, pembuat aplikasi ini tidak ridho dunia akhirat jika ada menjualnya".⚠️**
+E-RCE adalah aplikasi pelayanan gawat darurat untuk masyarakat yang membutuhkan pertolongan seperti kecelakaan lalu lintas, kebakaran, dan pelayanan ambulans. Selain itu aplikasi ini juga dapat menjadi sistem informasi untuk organisasi yang bergerak dibidang kemanusiaan (PMI, PSC, dll).
+
+## Fitur yang ada di E-RCE
+Berikut beberapa fitur yang tersedia di E-RCE :
+1. Website organisasi (*landing page*)
+    - Slishow foto-foto kegiatan organisasi
+    - Postingan atau berita organisasi
+    - Tombol panic button (Layanan Gawat Darurat)
+    - Tombol login aplikasi (khusus untuk anggota)
+    - Galeri atau foto kegiatan
+    - Pendaftaran calon anggota organisasi
+    - Informasi tugas & fungsi organisasi
+    - Kontak informasi organisasi (alamat, nomor telepon, sosial media)
+2. Fitur layanan gawat darurat (*panic button*)
+    - Penanganan kecelakaan
+    - Penanganan kebakaran
+    - Layanan ambulans
+3. Halaman login aplikasi E-RCE
+4. Halaman utama aplikasi
+    - Grafik laporan masyarakat (penenganan kecelakaan, penanganan kebakaran, layanan ambulans)
+    - Grafik laporan kegiatan organisasi (per tanggal)
+5. Halaman profil pengguna
+6. Fitur ganti password
+7. Fitur galeri kegiatan
+8. Fitur tambah rumah sakit
+9. Fitur data calon anggota
+10. Fitur data anggota
+11. Fitur kendaraan operasional
+12. Fitur buat berita & postingan
+13. Fitur pengaturan menu aplikasi
+14. Fitur pengaturan submenu aplikasi
+15. Fitur pengaturan level/role
+16. Daftar rumah sakit
+17. Fitur laporan kecelakaan
+    - Peta seluruh laporan kecelakaan
+    - Kirim laporan ke Telegram / WhatsApp
+    - Hapus laporan kecelakaan
+18. Fitur laporan kebakaran
+    - Peta seluruh laporan kebakaran
+    - Kirim laporan ke Telegram / WhatsApp
+    - Hapus laporan kebakaran
+19. Fitur pelayanan ambulans
+    - Peta seluruh permintaan layanan ambulans
+    - Kirim laporan ke Telegram / WhatsApp
+    - Hapus data pelayanan ambulans
+20. Fitur buat laporan kegiatan
+21. Fitur seluruh data kegiatan
+22. Fitur buat surat tugas
+    - Print PDF surat tugas
+23. Fitur pengaturan surat
+24. Fitur pengaturan aplikasi
+    - Nama aplikasi, title, footer, favicon
+    - Ubah logo aplikasi
+    - Pengaturan halaman pendaftaran calon anggota
+25. Fitur pengaturan API
+    - Pengaturan API Telegram
+    - Pengaturan API WhatsApp
+26. Fitur pengaturan website (*landing page*)
+    - Pengaturan slideshow website
+    - Pengaturan informasi organisasi
+    - Pengaturan footer website
+    - Pengaturan sosial media organisasi
+27. Logout / keluar dari aplikasi
+
+## Cara instalasi aplikasi
+- Silahkan clone repo E-RCE : `git clone https://github.com/hafiizh10/E-RCE.git`
+- Atau download file zip pada link berikut ...
+- Jalankan `composer install` pada folder E-RCE
+- Buat database dengan nama `e_rce`
+- Import file e_rce.sql pada folder database
 
 Login aplikasi : 
 1. Admin<br>
@@ -17,3 +86,7 @@ Requirement :
 4. API WhatsApp Gateway (WABLAS)
 5. API Bot Telegram
 6. API Google Maps
+
+<hr>
+
+**<h3>⚠️"Mohon aplikasi open source ini jangan diperjual belikan, pembuat aplikasi ini tidak ridho dunia akhirat jika ada menjualnya".⚠️</h3>**
