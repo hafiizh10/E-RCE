@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 21, 2022 at 01:16 PM
+-- Generation Time: Mar 21, 2022 at 01:28 PM
 -- Server version: 8.0.28
 -- PHP Version: 7.4.15
 
@@ -29,16 +29,16 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tb_calon` (
   `id` int NOT NULL,
-  `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `nopol_calon` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `nik` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `no_sim` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `jk` enum('Laki-laki','Perempuan') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `ttl` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `alamat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `pekerjaan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `no_tlp` varchar(13) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `nama` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `nopol_calon` varchar(12) COLLATE utf8mb4_general_ci NOT NULL,
+  `nik` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `no_sim` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `jk` enum('Laki-laki','Perempuan') COLLATE utf8mb4_general_ci NOT NULL,
+  `ttl` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `alamat` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `pekerjaan` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `no_tlp` varchar(13) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `is_active` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -58,10 +58,10 @@ INSERT INTO `tb_calon` (`id`, `nama`, `nopol_calon`, `nik`, `no_sim`, `jk`, `ttl
 
 CREATE TABLE `tb_galeri` (
   `id` int NOT NULL,
-  `nama` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `ket` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `created_at` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `nama` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
+  `ket` longtext COLLATE utf8mb4_general_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `created_at` varchar(200) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -84,13 +84,13 @@ INSERT INTO `tb_galeri` (`id`, `nama`, `ket`, `image`, `created_at`) VALUES
 
 CREATE TABLE `tb_giat` (
   `id` int NOT NULL,
-  `kegiatan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `waktu` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `lokasi` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `penanganan` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `koordinator` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `kendaraan` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `rs` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `kegiatan` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `waktu` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `lokasi` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `penanganan` varchar(500) COLLATE utf8mb4_general_ci NOT NULL,
+  `koordinator` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `kendaraan` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `rs` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -115,13 +115,13 @@ INSERT INTO `tb_giat` (`id`, `kegiatan`, `waktu`, `lokasi`, `penanganan`, `koord
 
 CREATE TABLE `tb_kendaraan` (
   `id` int NOT NULL,
-  `nopol` varchar(13) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `merk` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `jenis` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `no_rangka` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `no_mesin` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `fungsi` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `ket` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `nopol` varchar(13) COLLATE utf8mb4_general_ci NOT NULL,
+  `merk` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `jenis` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `no_rangka` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `no_mesin` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `fungsi` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `ket` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -140,10 +140,10 @@ INSERT INTO `tb_kendaraan` (`id`, `nopol`, `merk`, `jenis`, `no_rangka`, `no_mes
 CREATE TABLE `tb_korban` (
   `id` int NOT NULL,
   `id_giat` int NOT NULL,
-  `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `umur` varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `alamat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `kondisi` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `nama` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `umur` varchar(3) COLLATE utf8mb4_general_ci NOT NULL,
+  `alamat` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `kondisi` varchar(500) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -174,12 +174,12 @@ INSERT INTO `tb_korban` (`id`, `id_giat`, `nama`, `umur`, `alamat`, `kondisi`) V
 
 CREATE TABLE `tb_laporan` (
   `id` int NOT NULL,
-  `laporan` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `waktu` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `latitude` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `longitude` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `lokasi` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `ket` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `laporan` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `waktu` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `latitude` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `longitude` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `lokasi` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `ket` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -202,15 +202,15 @@ INSERT INTO `tb_laporan` (`id`, `laporan`, `waktu`, `latitude`, `longitude`, `lo
 
 CREATE TABLE `tb_pengaturan` (
   `id` int NOT NULL,
-  `nama_aplikasi` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `title_aplikasi` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `logo_menu` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `footer_aplikasi` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `favicon` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `nama_aplikasi` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `title_aplikasi` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `logo_menu` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `footer_aplikasi` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `favicon` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `rekrutmen` int DEFAULT NULL,
-  `chat_id` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `chat_id` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `token` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `bot_active` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -220,7 +220,7 @@ CREATE TABLE `tb_pengaturan` (
 
 INSERT INTO `tb_pengaturan` (`id`, `nama_aplikasi`, `title_aplikasi`, `logo_menu`, `footer_aplikasi`, `favicon`, `image`, `rekrutmen`, `chat_id`, `token`, `bot_active`) VALUES
 (1, 'INDONESIAN ESCORTING AMBULANCE WILAYAH BANJARBARU', 'Aplikasi IEA Banjarbaru', 'IEA BJB', 'Copyright © 2021 <a href=\'https://zoelva.ieabjb.my.id/\'>TIM IT IEA Banjarbaru</a>.', 'logo1.ico', 'lambang.png', 1, NULL, NULL, NULL),
-(2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '-561070359', '1703232050:AAF4Re5SgsXgzC725EdweJ84MgA1ifSr7YY', 1),
+(2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'id chat telegram', 'token bot telegram', 0),
 (3, NULL, NULL, NULL, NULL, NULL, 'https://sawit.wablas.com', NULL, '082157254820', 'token wablas anda', 0);
 
 -- --------------------------------------------------------
@@ -231,17 +231,17 @@ INSERT INTO `tb_pengaturan` (`id`, `nama_aplikasi`, `title_aplikasi`, `logo_menu
 
 CREATE TABLE `tb_pengaturan_website` (
   `id` int NOT NULL,
-  `informasi_1` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
-  `title_1` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `informasi_2` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
-  `title_2` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `alamat` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
-  `text_1` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `text_2` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `text_3` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `slideshow_1` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `slideshow_2` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `slideshow_3` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+  `informasi_1` longtext COLLATE utf8mb4_general_ci,
+  `title_1` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `informasi_2` longtext COLLATE utf8mb4_general_ci,
+  `title_2` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `alamat` longtext COLLATE utf8mb4_general_ci,
+  `text_1` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `text_2` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `text_3` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `slideshow_1` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `slideshow_2` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `slideshow_3` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -263,12 +263,12 @@ INSERT INTO `tb_pengaturan_website` (`id`, `informasi_1`, `title_1`, `informasi_
 
 CREATE TABLE `tb_postingan` (
   `id` int NOT NULL,
-  `judul` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `isi` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `created_at` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `judul` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `isi` longtext COLLATE utf8mb4_general_ci NOT NULL,
+  `kategori` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `created_at` varchar(100) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -288,8 +288,8 @@ INSERT INTO `tb_postingan` (`id`, `judul`, `slug`, `isi`, `kategori`, `image`, `
 
 CREATE TABLE `tb_rs` (
   `id` int NOT NULL,
-  `nama_rs` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `link_maps` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `nama_rs` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `link_maps` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -351,18 +351,18 @@ INSERT INTO `tb_rs` (`id`, `nama_rs`, `link_maps`) VALUES
 
 CREATE TABLE `tb_user` (
   `id` int NOT NULL,
-  `nama` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `nopol_user` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `jk` enum('Laki-laki','Perempuan') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `alamat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `tlp_user` varchar(13) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `jabatan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `nra` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `username` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `level` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `image` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `nama` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
+  `nopol_user` varchar(12) COLLATE utf8mb4_general_ci NOT NULL,
+  `jk` enum('Laki-laki','Perempuan') COLLATE utf8mb4_general_ci NOT NULL,
+  `alamat` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `tlp_user` varchar(13) COLLATE utf8mb4_general_ci NOT NULL,
+  `jabatan` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `nra` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `username` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `level` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
+  `image` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
   `role_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -409,7 +409,7 @@ INSERT INTO `user_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 
 CREATE TABLE `user_menu` (
   `id` int NOT NULL,
-  `menu` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `menu` varchar(128) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -432,7 +432,7 @@ INSERT INTO `user_menu` (`id`, `menu`) VALUES
 
 CREATE TABLE `user_role` (
   `id` int NOT NULL,
-  `role` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `role` varchar(128) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -452,8 +452,8 @@ INSERT INTO `user_role` (`id`, `role`) VALUES
 CREATE TABLE `user_sub_menu` (
   `id` int NOT NULL,
   `menu_id` int NOT NULL,
-  `title` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `url` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `title` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
+  `url` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
   `is_active` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
