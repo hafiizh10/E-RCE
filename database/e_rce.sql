@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 22, 2022 at 01:52 PM
+-- Generation Time: Mar 22, 2022 at 04:23 PM
 -- Server version: 8.0.28
 -- PHP Version: 7.4.15
 
@@ -250,7 +250,7 @@ CREATE TABLE `tb_pengaturan_website` (
 
 INSERT INTO `tb_pengaturan_website` (`id`, `informasi_1`, `title_1`, `informasi_2`, `title_2`, `alamat`, `text_1`, `text_2`, `text_3`, `slideshow_1`, `slideshow_2`, `slideshow_3`) VALUES
 (1, '<p>Merupakan website organisasi yang dimiliki oleh IEA Wilayah Banjarbaru sebagai media informasi dan pelayanan kepada masyarakat luas. Website ini mempunyai banyak fitur yang digunakan untuk memudahkan anggota IEA dalam menjalankan tugasnya.<br></p>', 'WEBSITE IEA BANJARBARU', '<p>WhatsApp : Humas 081645498629 / Korlap 082255535822<br>Instagram DM : @iea.banjarbaru <br>Facebook : official.iea.bjb <br>Email : ieabanjarbaru@gmail.com<br></p>', 'KONTAK INFORMASI', 'Jl. Guntung Manggis No.02 Posko Guntung Manggis Fire Rescue Banjarbaru Jl. Trikora Kota Banjarbaru, Kalimantan Selatan.', NULL, NULL, NULL, NULL, NULL, NULL),
-(2, NULL, NULL, NULL, NULL, NULL, 'Selamat Datang Di Website IEA Wilayah Banjarbaru', '#Berbuat Tanpa Berharap', '#Waktu Adalah Nyawa', 'gambar_1.jpg.webp', 'gambar_2.jpg.webp', 'gambar_3.jpg.webp'),
+(2, NULL, NULL, NULL, NULL, NULL, 'Selamat Datang Di Website IEA Wilayah Banjarbaru', '#Berbuat Tanpa Berharap', '#Waktu Adalah Nyawa', 'gambar.jpg.webp', 'gambar_2.jpg.webp', 'gambar_3.jpg.webp'),
 (3, '<p>1. Menjadi relawan siap siaga bagi masyarakat yang membutuhkan pertolongan gawat darurat<br>2. Secara Sukarela membantu masyarakat yang membutuhkan pertolongan gawat darurat<br>3. Menumbuhkan jiwa kesosialan dan kemanusiaan kepada seluruh masyarakat Indonesia</p>', 'Tugas IEA Wilayah Banjarbaru', '<p>4. Menyuarakan kesadaran masyarakat Indonesia untuk memprioritaskan kendaraan gawat darurat/emergency (ambulans, pemadam kebakaran, SAR, dll)<br>5. Melakukan kerjasama dengan instansi terkait dalam pelayanan kegawatdaruratan<br>6. Memperlancar jalur ambulans agar terhindar dari berbagai macam hambatan<br>7. Membantu ambulans agar cepat sampai ke rumah sakit dengan selamat tanpa membahayakan diri sendiri, ambulans, dan pengendara lain</p>', 'Fungsi IEA Wilayah Banjarbaru', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (4, NULL, NULL, NULL, NULL, NULL, '6281251206812', 'https://www.instagram.com/iea.banjarbaru', 'https://www.facebook.com/ieabjb.official', 'ieabanjarbaru@gmail.com', NULL, NULL),
 (5, 'Jl. Trikora Komp Wengga Kuda Trikora Kuda Tahap 5 No 123 RT. 048 RW. 07 Banjarbaru, Kalimantan Selatan. Email : ieabanjarbaru@gmail.com, Telp. 082157254820', 'INDONESIAN ESCORTING AMBULANCE WILAYAH BANJARBARU', 'Bersama ini kami selaku pengurus Indonesian Escorting Ambulance Wilayah Banjarbaru memberikan tugas kepada saudara kami sebagai berikut :', 'Ketua IEA Wilayah Banjarbaru', 'Demikian surat tugas ini dibuat dengan sebenarnya untuk dipergunakan sebagaimana mestinya, mohon agar dapat terlaksana kami ucapkan terima kasih.', 'M. Hendriani Ihsan, S.kep., Ns', 'logo-nasional.png', 'logo-organisasi.png', 'ttd.jpg', NULL, NULL);

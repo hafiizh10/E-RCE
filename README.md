@@ -67,20 +67,20 @@ Berikut beberapa fitur yang tersedia di E-RCE :
 ## Tampilan Aplikasi
 Berikut beberapa tampilan dari aplikasi E-RCE, untuk versi lengkap nya dapat dilihat pada video demo aplikasi.<br>
 Video demo aplikasi : https://www.youtube.com/watch?v=qFE2UHChDAE
-1. Halaman *landing page* / website
+1. **Halaman *landing page* / website**
 ![Halaman landing page](https://raw.githubusercontent.com/hafiizh10/E-RCE/master/assets/screenshot/halaman%20landing%20page.png)
-2. Halaman layanan gawat darurat
+2. **Halaman layanan gawat darurat**
 ![Halaman layanan gawat darurat](https://raw.githubusercontent.com/hafiizh10/E-RCE/master/assets/screenshot/halaman%20layanan%20gawat%20darurat.png)
-3. Halaman laporan pelayanan ambulans
+3. **Halaman laporan pelayanan ambulans**
 ![Halaman laporan pelayanan ambulans](https://raw.githubusercontent.com/hafiizh10/E-RCE/master/assets/screenshot/halaman%20laporan%20pelayanan.png)
-4. Peta seluruh layanan ambulans
+4. **Peta seluruh layanan ambulans**
 ![Peta seluruh layanan ambulans](https://raw.githubusercontent.com/hafiizh10/E-RCE/master/assets/screenshot/peta%20seluruh%20layanan.png)
-5. Halaman utama aplikasi
+5. **Halaman utama aplikasi**
 ![Halaman utama aplikasi 1](https://raw.githubusercontent.com/hafiizh10/E-RCE/master/assets/screenshot/halaman%20utama%201.png)
 ![Halaman utama aplikasi 2](https://raw.githubusercontent.com/hafiizh10/E-RCE/master/assets/screenshot/halaman%20utama%202.png)
-6. Halaman profil pengguna
+6. **Halaman profil pengguna**
 ![Halaman profil pengguna](https://raw.githubusercontent.com/hafiizh10/E-RCE/master/assets/screenshot/halaman%20profile.png)
-7. Halaman pengaturan aplikasi
+7. **Halaman pengaturan aplikasi**
 ![Halaman profil pengguna](https://raw.githubusercontent.com/hafiizh10/E-RCE/master/assets/screenshot/halaman%20pengaturan%20aplikasi.png)
 
 ## Cara instalasi aplikasi
