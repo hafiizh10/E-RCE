@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 21, 2022 at 01:28 PM
+-- Generation Time: Mar 22, 2022 at 01:52 PM
 -- Server version: 8.0.28
 -- PHP Version: 7.4.15
 
@@ -47,8 +47,8 @@ CREATE TABLE `tb_calon` (
 --
 
 INSERT INTO `tb_calon` (`id`, `nama`, `nopol_calon`, `nik`, `no_sim`, `jk`, `ttl`, `alamat`, `pekerjaan`, `no_tlp`, `email`, `is_active`) VALUES
-(1, 'Hafiizh Zoelva', 'DA 6654 A', '3271046504931234', '123456789012', 'Laki-laki', 'Banjarbaru, 2000/05/09', 'Komplek Saadah 2, Jl.Muslimin No.21A Rt.15 Rw.04, Sungai Paring, Martapura Kota', 'Mahasiswa', '08214623542', 'zoelva@mail.com', 0),
-(2, 'Zoelva Khairani', 'DA 6654 A', '3271046504931234', '123456789012', 'Laki-laki', 'Banjarbaru, 2000/05/10', 'Komplek Saadah 2, Jl.Muslimin No.21A Rt.15 Rw.04, Sungai Paring, Martapura Kota', 'Mahasiswa', '08214623542', 'email@gmail.com', 0);
+(1, 'Hafiizh Zoelva', 'DA 6654 A', '3271046504931234', '123456789012', 'Laki-laki', 'Banjarbaru, 2000/05/09', 'Komplek Mawar 2, Jl.Melati No.18A Rt.12 Rw.03, Martapura Kota', 'Mahasiswa', '081234567891', 'zoelva@mail.com', 0),
+(2, 'Zoelva Khairani', 'DA 6654 A', '3271046504931234', '123456789012', 'Laki-laki', 'Banjarbaru, 2000/05/10', 'Komplek Mawar 2, Jl.Melati No.18A Rt.12 Rw.03, Martapura Kota', 'Mahasiswa', '081234567891', 'email@gmail.com', 0);
 
 -- --------------------------------------------------------
 
@@ -371,8 +371,8 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id`, `nama`, `nopol_user`, `jk`, `alamat`, `tlp_user`, `jabatan`, `nra`, `email`, `username`, `password`, `level`, `image`, `role_id`) VALUES
-(1, 'Admin', 'DA 6420 BBD', 'Laki-laki', 'Komplek Saadah 2, Jl.Muslimin No.21A Rt.15 Rw.04, Sungai Paring, Martapura Kota', '082157254820', 'Anggota', 'BB-305-012', 'hafiizh10@gmail.com', 'admin', '$2y$10$jpZnCQdGmQksPD3Bw88yK.OZSMelo8HVnROH2uxxOfMUOmYydB5Rq', 'Admin', 'default.jpg', 1),
-(17, 'Pengguna', 'DA 8364 BA', 'Laki-laki', 'Komplek Citra Graha Banjarbaru KM.9 Kalimantan Selatan', '08212534273', 'Anggota', 'BB-305-112', 'hafiizh10@gmail.com', 'pengguna', '$2y$10$czq4TfYbBTJImGxBi.7hLOotLEQBK8wAC9T9ZNFNISJ3qIoz9YNIy', 'User', 'default.jpg', 2);
+(1, 'Admin', 'DA 6420 BBD', 'Laki-laki', 'Komplek Mawar 2, Jl.Melati No.18A Rt.12 Rw.03, Martapura Kota', '081234567891', 'Anggota', 'BB-305-012', 'hafiizh10@gmail.com', 'admin', '$2y$10$jpZnCQdGmQksPD3Bw88yK.OZSMelo8HVnROH2uxxOfMUOmYydB5Rq', 'Admin', 'default.jpg', 1),
+(17, 'Pengguna', 'DA 8364 BA', 'Laki-laki', 'Komplek Citra Graha Banjarbaru KM.9 Kalimantan Selatan', '081234567891', 'Anggota', 'BB-305-112', 'hafiizh10@gmail.com', 'pengguna', '$2y$10$czq4TfYbBTJImGxBi.7hLOotLEQBK8wAC9T9ZNFNISJ3qIoz9YNIy', 'User', 'default.jpg', 2);
 
 -- --------------------------------------------------------
 

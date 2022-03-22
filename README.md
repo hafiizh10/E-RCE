@@ -1,11 +1,11 @@
 **<h1 align="center">Aplikasi Respon Cepat Emergency (E-RCE)</h1>**
 
-E-RCE adalah aplikasi pelayanan gawat darurat untuk masyarakat yang membutuhkan pertolongan seperti kecelakaan lalu lintas, kebakaran, dan pelayanan ambulans. Selain itu aplikasi ini juga dapat menjadi sistem informasi untuk organisasi yang bergerak dibidang kemanusiaan (PMI, PSC, dll).
+E-RCE adalah aplikasi pelayanan gawat darurat untuk masyarakat yang membutuhkan pertolongan seperti kecelakaan lalu lintas, kebakaran, dan pelayanan ambulans. Selain itu aplikasi ini juga dapat menjadi sistem informasi untuk organisasi yang bergerak dibidang kemanusiaan seperti PMI, PSC, dan organisasi swasta lainnya.
 
 ## Fitur yang ada di E-RCE
 Berikut beberapa fitur yang tersedia di E-RCE :
 1. Website organisasi (*landing page*)
-    - Slishow foto-foto kegiatan organisasi
+    - Slideshow foto-foto kegiatan organisasi
     - Postingan atau berita organisasi
     - Tombol panic button (Layanan Gawat Darurat)
     - Tombol login aplikasi (khusus untuk anggota)
@@ -64,28 +64,51 @@ Berikut beberapa fitur yang tersedia di E-RCE :
     - Pengaturan sosial media organisasi
 27. Logout / keluar dari aplikasi
 
+## Tampilan Aplikasi
+Berikut beberapa tampilan dari aplikasi E-RCE :
+1. Halaman *landing page* / website
+2. Halaman layanan gawat darurat
+3. Halaman laporan pelayanan ambulans
+4. Peta seluruh layanan ambulans
+5. Halaman utama aplikasi
+6. Halaman profil pengguna
+7. Halaman pengaturan aplikasi
+
 ## Cara instalasi aplikasi
 - Silahkan clone repo E-RCE : `git clone https://github.com/hafiizh10/E-RCE.git`
 - Atau download file zip pada link berikut ...
 - Jalankan `composer install` pada folder E-RCE
 - Buat database dengan nama `e_rce`
-- Import file e_rce.sql pada folder database
+- Import file `e_rce.sql` pada folder database
+- Buka aplikasi pada link berikut `https://localhost/E-RCE`
+- Untuk mengubah API Google Maps, masuk ke folder application\libraries buka file `Googlemaps.php`. Masukan api key anda pada `var $apiKey` baris 24.
 
 Login aplikasi : 
-1. Admin<br>
+1. **Admin**<br>
 username : admin<br>
 password : admin
-2. User<br>
+2. **User**<br>
 username : pengguna<br>
 password : pengguna
 
-Requirement : 
+## Requirement
 1. PHP >= 7.4 
 2. MySQL
 3. Composer
 4. API WhatsApp Gateway (WABLAS)
 5. API Bot Telegram
 6. API Google Maps
+
+## Donasi
+Jika dirasa aplikasi ini bermanfaat, tidak ada salahnya bagi saudara/i yang ingin memberi dukungan melalui :
+> Bank BNI : No. Rekening 0562316301 An. Hafiizh Zoelva Khairani<br>
+> Link Trakteer : https://trakteer.id/zoel.va
+
+Berapapun yang anda kirimkan, saya ucapkan terima kasih banyak.
+
+## Kontak saya
+- Instagram : https://www.instagram.com/zoel.va/
+- Email : hafiizh10@gmail.com
 
 <hr>
 
