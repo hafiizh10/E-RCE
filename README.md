@@ -64,9 +64,17 @@ Berikut beberapa fitur yang tersedia di E-RCE :
     - Pengaturan sosial media organisasi
 27. Logout / keluar dari aplikasi
 
+<hr>
+
+- Aplikasi ini dapat mengirimkan notifikasi laporan gawat darurat ke WhatsApp anggota / grup Telegram.
+- Aplikasi ini terdapat daftar rumah sakit di seluruh kalimantan selatan beserta link google maps nya.
+- Aplikasi ini dapat membuat surat tugas dan dapat di unduh dengan format PDF.
+- Semua pengguna aplikasi dapat mengunggah foto kegiatan dan akan tampil pada website utama.
+
 ## Tampilan Aplikasi
 Berikut beberapa tampilan dari aplikasi E-RCE, untuk versi lengkap nya dapat dilihat pada video demo aplikasi.<br>
-Video demo aplikasi : https://www.youtube.com/watch?v=qFE2UHChDAE
+**Video demo aplikasi : https://www.youtube.com/watch?v=l-grNvNdCbI**
+
 1. **Halaman *landing page* / website**
 ![Halaman landing page](https://raw.githubusercontent.com/hafiizh10/E-RCE/master/assets/screenshot/halaman%20landing%20page.png)
 2. **Halaman layanan gawat darurat**
@@ -85,7 +93,7 @@ Video demo aplikasi : https://www.youtube.com/watch?v=qFE2UHChDAE
 
 ## Cara instalasi aplikasi
 - Silahkan clone repo E-RCE : `git clone https://github.com/hafiizh10/E-RCE.git`
-- Atau download file zip pada link berikut ...
+- Atau download file zip pada link berikut (coming soon)
 - Jalankan `composer install` pada folder E-RCE
 - Buat database dengan nama `e_rce`
 - Import file `e_rce.sql` pada folder database
@@ -116,6 +124,7 @@ Jika dirasa aplikasi ini bermanfaat, tidak ada salahnya bagi saudara/i yang ingi
 Berapapun yang anda kirimkan, saya ucapkan terima kasih banyak.
 
 ## Kontak saya
+Jika ada pertanyaan atau membutuhkan bantuan silahkan hubungi saya pada kontak dibawah ini.
 - Instagram : https://www.instagram.com/zoel.va/
 - Email : hafiizh10@gmail.com
 

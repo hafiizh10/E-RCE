@@ -82,7 +82,7 @@
       <?php if ($aplikasi['rekrutmen'] == '1') : ?>
 				<div class="hpanel">
             <div class="panel-body">
-                <?= form_open('rekrutmen/index'); ?>
+                <?= form_open('rekrutmen/index', 'autocomplete="off"'); ?>
                     <div class="row">
                         <div class="form-group col-lg-12">
                             <label>Nama Lengkap</label>
@@ -145,7 +145,8 @@
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-success loginbtn">Daftar</button>
-                    </div>
+                        <input type="button" onclick="location.href='<?= base_url() ?>';" class="btn btn-custon-four btn-danger" value="Kembali" />
+                      </div>
                 <?= form_close(); ?>
             </div>
         </div>
