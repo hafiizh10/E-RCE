@@ -82,7 +82,7 @@
 		<script>
 			$(function() {
 				$('#tombol_wa').floatingWhatsApp({
-					phone: '6282157254820',
+					phone: '628123456789',
 					popupMessage: 'Selamat datang di website IEA Banjarbaru tulis pertanyaan anda pada kolom chat dibawah ini',
 					message: "Permisi, saya mau tanya tentang ....",
 					showPopup: true,

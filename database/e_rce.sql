@@ -221,7 +221,7 @@ CREATE TABLE `tb_pengaturan` (
 INSERT INTO `tb_pengaturan` (`id`, `nama_aplikasi`, `title_aplikasi`, `logo_menu`, `footer_aplikasi`, `favicon`, `image`, `rekrutmen`, `chat_id`, `token`, `bot_active`) VALUES
 (1, 'INDONESIAN ESCORTING AMBULANCE WILAYAH BANJARBARU', 'Aplikasi IEA Banjarbaru', 'IEA BJB', 'Copyright © 2021 <a href=\'https://zoelva.ieabjb.my.id/\'>TIM IT IEA Banjarbaru</a>.', 'logo1.ico', 'lambang.png', 1, NULL, NULL, NULL),
 (2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'id chat telegram', 'token bot telegram', 0),
-(3, NULL, NULL, NULL, NULL, NULL, 'https://sawit.wablas.com', NULL, '082157254820', 'token wablas anda', 0);
+(3, NULL, NULL, NULL, NULL, NULL, 'https://sawit.wablas.com', NULL, '08123456789', 'token wablas anda', 0);
 
 -- --------------------------------------------------------
 
@@ -253,7 +253,7 @@ INSERT INTO `tb_pengaturan_website` (`id`, `informasi_1`, `title_1`, `informasi_
 (2, NULL, NULL, NULL, NULL, NULL, 'Selamat Datang Di Website IEA Wilayah Banjarbaru', '#Berbuat Tanpa Berharap', '#Waktu Adalah Nyawa', 'gambar.jpg.webp', 'gambar_2.jpg.webp', 'gambar_3.jpg.webp'),
 (3, '<p>1. Menjadi relawan siap siaga bagi masyarakat yang membutuhkan pertolongan gawat darurat<br>2. Secara Sukarela membantu masyarakat yang membutuhkan pertolongan gawat darurat<br>3. Menumbuhkan jiwa kesosialan dan kemanusiaan kepada seluruh masyarakat Indonesia</p>', 'Tugas IEA Wilayah Banjarbaru', '<p>4. Menyuarakan kesadaran masyarakat Indonesia untuk memprioritaskan kendaraan gawat darurat/emergency (ambulans, pemadam kebakaran, SAR, dll)<br>5. Melakukan kerjasama dengan instansi terkait dalam pelayanan kegawatdaruratan<br>6. Memperlancar jalur ambulans agar terhindar dari berbagai macam hambatan<br>7. Membantu ambulans agar cepat sampai ke rumah sakit dengan selamat tanpa membahayakan diri sendiri, ambulans, dan pengendara lain</p>', 'Fungsi IEA Wilayah Banjarbaru', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (4, NULL, NULL, NULL, NULL, NULL, '6281251206812', 'https://www.instagram.com/iea.banjarbaru', 'https://www.facebook.com/ieabjb.official', 'ieabanjarbaru@gmail.com', NULL, NULL),
-(5, 'Jl. Trikora Komp Wengga Kuda Trikora Kuda Tahap 5 No 123 RT. 048 RW. 07 Banjarbaru, Kalimantan Selatan. Email : ieabanjarbaru@gmail.com, Telp. 082157254820', 'INDONESIAN ESCORTING AMBULANCE WILAYAH BANJARBARU', 'Bersama ini kami selaku pengurus Indonesian Escorting Ambulance Wilayah Banjarbaru memberikan tugas kepada saudara kami sebagai berikut :', 'Ketua IEA Wilayah Banjarbaru', 'Demikian surat tugas ini dibuat dengan sebenarnya untuk dipergunakan sebagaimana mestinya, mohon agar dapat terlaksana kami ucapkan terima kasih.', 'M. Hendriani Ihsan, S.kep., Ns', 'logo-nasional.png', 'logo-organisasi.png', 'ttd.jpg', NULL, NULL);
+(5, 'Jl. Trikora Komp Wengga Kuda Trikora Kuda Tahap 5 No 123 RT. 048 RW. 07 Banjarbaru, Kalimantan Selatan. Email : ieabanjarbaru@gmail.com, Telp. 08123456789', 'INDONESIAN ESCORTING AMBULANCE WILAYAH BANJARBARU', 'Bersama ini kami selaku pengurus Indonesian Escorting Ambulance Wilayah Banjarbaru memberikan tugas kepada saudara kami sebagai berikut :', 'Ketua IEA Wilayah Banjarbaru', 'Demikian surat tugas ini dibuat dengan sebenarnya untuk dipergunakan sebagaimana mestinya, mohon agar dapat terlaksana kami ucapkan terima kasih.', 'M. Hendriani Ihsan, S.kep., Ns', 'logo-nasional.png', 'logo-organisasi.png', 'ttd.jpg', NULL, NULL);
 
 -- --------------------------------------------------------
 

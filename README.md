@@ -116,18 +116,9 @@ password : pengguna
 5. API Bot Telegram
 6. API Google Maps
 
-## Donasi [Donation]
-Jika dirasa aplikasi ini bermanfaat, tidak ada salahnya bagi saudara/i yang ingin memberi dukungan melalui :
-> **Bank Jago : No. Rekening 504107213059 An. Hafiizh Zoelva Khairani**<br>
-> **PayPal : https://paypal.me/zoelva12**<br>
-> **Link Trakteer : https://trakteer.id/zoel.va**
-
-Berapapun yang anda kirimkan, saya ucapkan terima kasih banyak.
-
 ## Kontak saya
 Jika ada pertanyaan atau membutuhkan bantuan silahkan hubungi saya pada kontak dibawah ini.
 - Instagram : https://www.instagram.com/zoel.va/
-- Email : hafiizh10@gmail.com
 
 <hr>
 
